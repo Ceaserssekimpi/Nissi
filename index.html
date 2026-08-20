@@ -1,0 +1,3869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nissi Technologies Limited — ICT solutions, IT equipment, infrastructure, managed services, networking, cybersecurity, software, procurement and technical support in Uganda.">
+  <meta name="keywords" content="Nissi Technologies, ICT Uganda, IT equipment Uganda, networking, cybersecurity, software development, procurement, IT support">
+  <title>Nissi Technologies Limited | ICT Solutions & Infrastructure</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Manrope:wght@500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Nissi Technologies Favicon -->
+<link rel="icon" type="image/png" sizes="512x512" href="images/favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="images/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon.png">
+  <style>
+    :root{
+      --navy:#071b33; --blue:#0b63ce; --blue2:#1785ff; --cyan:#18b6d9;
+      --ink:#0c1b2a; --muted:#607086; --light:#f5f8fc; --white:#fff;
+      --line:#e5ebf3; --shadow:0 18px 50px rgba(7,27,51,.10);
+      --radius:20px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,Arial,sans-serif;color:var(--ink);line-height:1.65;background:#fff}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1180px,92%);margin:auto}
+    .topbar{background:var(--navy);color:#dce8f6;font-size:13px}
+    .topbar .container{display:flex;justify-content:space-between;gap:20px;padding:9px 0;flex-wrap:wrap}
+    .topbar span{margin-right:18px}
+    header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(229,235,243,.9)}
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px;font-family:Manrope;font-weight:800;color:var(--navy)}
+    .brand-mark{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--blue),var(--cyan));display:grid;place-items:center;color:white;font-weight:800;box-shadow:0 8px 22px rgba(11,99,206,.25)}
+    .brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:1.3px;font-weight:700}
+    .navlinks{display:flex;gap:27px;align-items:center;font-size:14px;font-weight:600}
+    .navlinks a:hover{color:var(--blue)}
+    .nav-cta{background:var(--blue);color:#fff!important;padding:11px 18px;border-radius:10px}
+    .menu{display:none;border:0;background:none;font-size:26px;cursor:pointer;color:var(--navy)}
+    .navlinks.mobile{display:flex;flex-direction:column;position:absolute;top:76px;left:0;right:0;background:white;padding:20px 24px;box-shadow:0 20px 40px rgba(0,0,0,.08);border-bottom:1px solid var(--line);gap:16px;align-items:flex-start;z-index:999}
+    .hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#061a31 0%,#0b3158 55%,#0877bd 100%);color:white}
+    .hero:before{content:"";position:absolute;width:620px;height:620px;border-radius:50%;right:-180px;top:-220px;background:radial-gradient(circle,rgba(24,182,217,.30),transparent 65%)}
+    .hero:after{content:"";position:absolute;inset:auto -10% -55% 25%;height:500px;background:radial-gradient(circle,rgba(23,133,255,.24),transparent 65%)}
+    .hero-grid{min-height:650px;display:grid;grid-template-columns:1.08fr .92fr;gap:60px;align-items:center;position:relative;z-index:1}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border:1px solid rgba(255,255,255,.22);border-radius:999px;background:rgba(255,255,255,.08);font-size:12px;font-weight:700;letter-spacing:.5px;margin-bottom:20px}
+    h1{font-family:Manrope;font-size:clamp(42px,5.4vw,72px);line-height:1.04;letter-spacing:-2.5px;max-width:750px}
+    .hero p{font-size:18px;color:#d7e5f4;max-width:650px;margin:24px 0 32px}
+    .buttons{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{padding:14px 21px;border-radius:11px;font-weight:700;font-size:14px;display:inline-flex;align-items:center;gap:8px}
+    .btn-primary{background:#fff;color:var(--navy)}
+    .btn-outline{border:1px solid rgba(255,255,255,.35);color:#fff}
+    .hero-card{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.15);border-radius:24px;padding:26px;box-shadow:0 30px 80px rgba(0,0,0,.18)}
+    .hero-card h3{font-family:Manrope;font-size:20px;margin-bottom:20px}
+    .metric{display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+    .metric:last-child{border:0}.metric strong{font-size:21px}.metric span{color:#c5d6e8;font-size:13px}
+    .section{padding:92px 0}.section.alt{background:var(--light)}
+    .section-head{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:42px}
+    .kicker{color:var(--blue);font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
+    h2{font-family:Manrope;font-size:clamp(30px,4vw,46px);line-height:1.12;letter-spacing:-1.2px;margin-top:8px}
+    .section-head p{max-width:520px;color:var(--muted)}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+    .about-copy p{color:var(--muted);margin-top:17px}
+    .quote{margin-top:25px;padding:20px 22px;border-left:4px solid var(--blue);background:#f4f8fd;border-radius:0 14px 14px 0;font-weight:700;color:var(--navy)}
+    .visual{min-height:420px;border-radius:28px;background:linear-gradient(145deg,#eaf5ff,#f9fbfe);border:1px solid var(--line);position:relative;overflow:hidden;box-shadow:var(--shadow)}
+    .network{position:absolute;inset:0;display:grid;place-items:center}
+    .network .core{width:110px;height:110px;border-radius:50%;display:grid;place-items:center;color:white;font-weight:800;background:linear-gradient(135deg,var(--blue),var(--cyan));box-shadow:0 20px 40px rgba(11,99,206,.25)}
+    .node{position:absolute;width:70px;height:70px;border-radius:18px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;font-size:25px;box-shadow:0 12px 30px rgba(7,27,51,.08)}
+    .n1{top:55px;left:70px}.n2{top:55px;right:70px}.n3{bottom:55px;left:70px}.n4{bottom:55px;right:70px}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .service{padding:27px;background:#fff;border:1px solid var(--line);border-radius:18px;transition:.25s;box-shadow:0 6px 20px rgba(7,27,51,.035)}
+    .service:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#c9dff8}
+    .icon{width:48px;height:48px;border-radius:13px;background:#eaf4ff;color:var(--blue);display:grid;place-items:center;font-size:22px;margin-bottom:19px}
+    .service h3{font-family:Manrope;font-size:18px;margin-bottom:9px}.service p{font-size:14px;color:var(--muted)}
+    .equip{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .equip-card{padding:23px;border:1px solid var(--line);border-radius:17px;background:white}
+    .equip-card strong{display:block;font-family:Manrope;font-size:16px;margin-bottom:5px}.equip-card span{font-size:13px;color:var(--muted)}
+    .security{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .security-item{background:#fff;border:1px solid var(--line);padding:22px;border-radius:16px;display:flex;gap:15px}
+    .security-item b{display:block;margin-bottom:4px}.security-item span{font-size:13px;color:var(--muted)}
+    .clients{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+    .client{padding:18px 12px;min-height:80px;display:grid;place-items:center;text-align:center;border:1px solid var(--line);border-radius:13px;background:#fff;font-size:13px;font-weight:700;color:#3e5066}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:45px}
+    .stat{padding:25px;border-radius:17px;background:#fff;border:1px solid var(--line)}.stat strong{font:800 31px Manrope;color:var(--blue);display:block}.stat span{font-size:13px;color:var(--muted)}
+    /* Partners */
+    .partners-grid{display:flex;flex-wrap:wrap;gap:24px 40px;justify-content:center;align-items:center;background:#fff;padding:30px 20px;border-radius:20px;border:1px solid var(--line);margin-top:20px}
+    .partner{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px;color:#2c3e50}
+    .partner i{font-size:32px;color:var(--blue)}
+    .contact{background:var(--navy);color:white;position:relative;overflow:hidden}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+    .contact p{color:#c4d2e2;margin:18px 0 26px}.contact-details div{margin:14px 0;color:#dbe7f2}
+    form{background:#fff;padding:28px;border-radius:20px;color:var(--ink);display:grid;gap:13px}
+    input,textarea,select{width:100%;padding:14px;border:1px solid #dbe3ed;border-radius:10px;font:inherit;outline:none}
+    textarea{min-height:125px;resize:vertical}.submit{border:0;background:var(--blue);color:white;padding:14px;border-radius:10px;font-weight:800;cursor:pointer}
+    .map-container{border-radius:16px;overflow:hidden;margin-top:20px;height:220px;border:1px solid rgba(255,255,255,.15)}
+    .map-container iframe{width:100%;height:100%;border:0;display:block}
+    footer{background:#041426;color:#9fb2c8;padding:25px 0;font-size:12px}.footer-grid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    /* WhatsApp floating button */
+    .whatsapp-float{position:fixed;bottom:24px;right:24px;z-index:9999;display:flex;align-items:center;gap:12px;background:#25D366;color:white;padding:14px 20px;border-radius:60px;box-shadow:0 8px 30px rgba(37,211,102,.35);font-weight:700;font-size:15px;transition:.2s;border:none;cursor:pointer}
+    .whatsapp-float:hover{transform:scale(1.05);background:#20b85a}
+    .whatsapp-float i{font-size:28px}
+    @media(max-width:900px){.navlinks{display:none}.menu{display:block}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.hero-grid{padding:80px 0}.services{grid-template-columns:repeat(2,1fr)}.equip{grid-template-columns:repeat(2,1fr)}.clients{grid-template-columns:repeat(3,1fr)}.stats{grid-template-columns:repeat(2,1fr)}.partners-grid{gap:16px 28px}}
+    @media(max-width:600px){.topbar .container{display:block}.topbar span{display:block;margin:2px 0}.section{padding:65px 0}.section-head{display:block}.section-head p{margin-top:15px}.services,.security,.equip,.clients,.stats{grid-template-columns:1fr}.hero-grid{min-height:auto;padding:70px 0}.hero-card{margin-top:10px}h1{letter-spacing:-1.7px}.visual{min-height:340px}.n1,.n3{left:30px}.n2,.n4{right:30px}.whatsapp-float{padding:12px 16px;font-size:13px}.whatsapp-float i{font-size:22px}}
+ 
+    .partners-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.partner {
+  min-height: 120px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #e7eaf0;
+  border-radius: 14px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+
+.partner:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.partner img {
+  width: 120px;
+  height: 55px;
+  object-fit: contain;
+  display: block;
+}
+
+.partner span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #344054;
+}
+
+@media (max-width: 900px) {
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .partners-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .partner {
+    padding: 15px 8px;
+  }
+
+  .partner img {
+    width: 90px;
+    height: 45px;
+  }
+
+  .partner span {
+    font-size: 12px;
+  }
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand-mark {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.brand-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.brand-name {
+  display: flex;
+  flex-direction: column;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #111827;
+}
+
+.brand-name small {
+  margin-top: 5px;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #667085;
+}
+ 
+ 
+/* FINAL BRAND PALETTE — DARK BLUE PRIMARY + ORANGE ACCENT */
+:root{
+  --primary:#062B5C !important;
+  --primary-dark:#031B3A !important;
+  --primary-mid:#0A4285 !important;
+  --accent:#F28C28 !important;
+  --accent-dark:#C96808 !important;
+  --accent-soft:#FFF2E2 !important;
+  --ink:#10233F !important;
+  --muted:#52657D !important;
+}
+
+/* Keep dark blue dominant throughout the interface */
+body{color:var(--ink)}
+header{border-bottom:3px solid var(--primary)}
+.topbar{background:var(--primary-dark);border-bottom:3px solid var(--accent)}
+
+.brand,.brand-name{color:var(--primary)}
+.brand-mark{
+  background:var(--primary) !important;
+  border-color:var(--accent) !important;
+}
+.navlinks a{color:var(--primary)}
+.navlinks a:hover{color:var(--accent)}
+.nav-cta{
+  background:var(--primary) !important;
+  border-color:var(--primary) !important;
+  color:#fff !important;
+}
+.nav-cta:hover{
+  background:var(--accent) !important;
+  border-color:var(--accent) !important;
+  color:#161616 !important;
+}
+
+.hero{
+  background:
+    radial-gradient(circle at 88% 18%,rgba(242,140,40,.16),transparent 25%),
+    linear-gradient(135deg,var(--primary-dark) 0%,var(--primary) 72%,var(--primary-mid) 100%) !important;
+  border-bottom:5px solid var(--accent);
+}
+.hero-card{border-left:4px solid var(--accent)}
+.eyebrow{border-color:rgba(242,140,40,.55)}
+.btn-primary{
+  background:var(--accent) !important;
+  border-color:var(--accent) !important;
+  color:#161616 !important;
+}
+.btn-primary:hover{
+  background:#fff !important;
+  border-color:#fff !important;
+  color:var(--primary) !important;
+}
+.btn-outline:hover{
+  border-color:var(--accent) !important;
+  color:var(--accent) !important;
+  background:transparent !important;
+}
+
+.kicker{color:var(--accent-dark) !important}
+.section h2{color:var(--primary) !important}
+.quote{
+  border-left-color:var(--accent) !important;
+  background:var(--accent-soft) !important;
+}
+
+.network .core{
+  background:var(--primary) !important;
+  border-color:var(--accent) !important;
+}
+.service{
+  border-top-color:var(--primary) !important;
+}
+.service:hover{border-top-color:var(--accent) !important}
+.icon{
+  background:var(--primary) !important;
+  color:#fff !important;
+}
+.service:hover .icon{
+  background:var(--accent) !important;
+  color:#161616 !important;
+}
+
+.equip-card{border-left-color:var(--accent) !important}
+.security-item{border-left-color:var(--primary) !important}
+.security-item:hover{border-left-color:var(--accent) !important}
+.client:hover,.partner:hover{border-color:var(--accent) !important}
+.stat{border-bottom-color:var(--accent) !important}
+.stat strong{color:var(--primary) !important}
+
+.contact{
+  background:var(--primary-dark) !important;
+  border-top:5px solid var(--accent) !important;
+}
+.contact .kicker{color:var(--accent) !important}
+form{border-top-color:var(--accent) !important}
+.submit{
+  background:var(--accent) !important;
+  border-color:var(--accent) !important;
+}
+.submit:hover{
+  background:var(--primary) !important;
+  border-color:var(--primary) !important;
+}
+footer{
+  background:#021326 !important;
+  border-top:3px solid var(--accent) !important;
+}
+.section-head > div:first-child:after{
+  background:var(--accent) !important;
+}
+a:focus-visible,button:focus-visible,input:focus-visible,
+textarea:focus-visible,select:focus-visible{
+  outline-color:var(--accent) !important;
+}
+
+  
+/* =========================================================
+   ENHANCED VISUAL SYSTEM
+   Rich color transitions + section-specific typography
+   + tasteful italic typography
+   ========================================================= */
+
+/* Extra font families */
+body{
+  font-family:"DM Sans",Arial,sans-serif;
+  background:#fff;
+}
+
+/* Hero / landing section: strong modern display typography */
+.hero h1{
+  font-family:"Space Grotesk",Arial,sans-serif !important;
+  font-weight:700;
+  letter-spacing:-2.2px;
+  background:linear-gradient(100deg,#FFFFFF 0%,#DCEBFA 52%,#F8B66D 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.hero p{
+  font-family:"DM Sans",Arial,sans-serif;
+}
+.eyebrow{
+  font-family:"Space Grotesk",Arial,sans-serif;
+  font-style:italic;
+}
+
+/* About section: elegant editorial feel */
+#about h2{
+  font-family:"Manrope",Arial,sans-serif !important;
+  font-weight:800;
+}
+#about .about-copy p:first-of-type{
+  font-family:"Lora",Georgia,serif;
+  font-size:17px;
+  line-height:1.8;
+}
+#about .about-copy p:nth-of-type(2){
+  font-family:"DM Sans",Arial,sans-serif;
+}
+#about .quote{
+  font-family:"Lora",Georgia,serif;
+  font-style:italic;
+}
+
+/* Services: clean technical typography */
+#services h2,
+#security h2{
+  font-family:"Space Grotesk",Arial,sans-serif !important;
+  font-weight:700;
+}
+.service h3{
+  font-family:"Manrope",Arial,sans-serif !important;
+  font-weight:800;
+}
+.service p{
+  font-family:"DM Sans",Arial,sans-serif;
+}
+
+/* Security: technical, authoritative */
+#security .security-item b{
+  font-family:"Space Grotesk",Arial,sans-serif;
+  font-weight:700;
+}
+#security .security-item span{
+  font-family:"DM Sans",Arial,sans-serif;
+}
+
+/* Equipment: compact corporate style */
+.equip-card strong{
+  font-family:"Space Grotesk",Arial,sans-serif !important;
+  font-weight:700;
+}
+.equip-card span{
+  font-family:"DM Sans",Arial,sans-serif;
+}
+
+/* Clients and partners */
+#clients h2{
+  font-family:"Manrope",Arial,sans-serif !important;
+  font-weight:800;
+}
+.client,.partner span{
+  font-family:"DM Sans",Arial,sans-serif;
+}
+.partners-grid + *{
+  font-family:"Space Grotesk",Arial,sans-serif;
+}
+
+/* Contact section: more personal/editorial */
+#contact h2{
+  font-family:"Lora",Georgia,serif !important;
+  font-weight:700;
+  font-style:italic;
+}
+#contact p{
+  font-family:"DM Sans",Arial,sans-serif;
+}
+.contact-details div{
+  font-family:"DM Sans",Arial,sans-serif;
+}
+form h3{
+  font-family:"Space Grotesk",Arial,sans-serif !important;
+}
+.form-note{
+  font-style:italic;
+}
+
+/* Footer */
+footer{
+  font-family:"DM Sans",Arial,sans-serif;
+}
+footer .footer-grid div:last-child{
+  font-family:"Lora",Georgia,serif;
+  font-style:italic;
+}
+
+/* ---------------------------------------------------------
+   COLOR TRANSITIONS
+   --------------------------------------------------------- */
+
+/* Smooth global transitions */
+a,button,.btn,.service,.equip-card,.client,.partner,.stat,
+.icon,.node,.nav-cta,.submit,.brand-mark{
+  transition:
+    color .3s ease,
+    background .35s ease,
+    background-color .35s ease,
+    border-color .3s ease,
+    box-shadow .35s ease,
+    transform .35s ease;
+}
+
+/* Hero animated color atmosphere */
+.hero{
+  background:
+    radial-gradient(circle at 15% 20%,rgba(242,140,40,.08),transparent 22%),
+    radial-gradient(circle at 88% 15%,rgba(10,66,133,.50),transparent 30%),
+    linear-gradient(120deg,#031B3A 0%,#062B5C 42%,#0A4285 72%,#174E82 100%) !important;
+  background-size:180% 180%;
+  animation:heroGradient 12s ease-in-out infinite alternate;
+}
+
+@keyframes heroGradient{
+  0%{background-position:0% 50%}
+  100%{background-position:100% 50%}
+}
+
+/* Orange glow transition on hero card */
+.hero-card{
+  transition:all .4s ease;
+}
+.hero-card:hover{
+  border-color:rgba(242,140,40,.65);
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.20),
+    0 0 35px rgba(242,140,40,.10);
+}
+
+/* Section backgrounds transition between cool blues and warm white */
+.section{
+  position:relative;
+}
+.section.alt{
+  background:
+    linear-gradient(135deg,#F5F8FC 0%,#EEF4FA 65%,#FFF8F0 100%) !important;
+}
+
+/* Service cards get a subtle blue-to-orange hover transition */
+.service:hover{
+  background:linear-gradient(145deg,#fff 0%,#F8FBFF 72%,#FFF5E9 100%);
+  border-top-color:var(--accent) !important;
+}
+
+/* Equipment cards */
+.equip-card:hover{
+  background:linear-gradient(135deg,#fff,#FFF7ED);
+  border-left-color:var(--accent) !important;
+}
+
+/* Security cards */
+.security-item:hover{
+  background:linear-gradient(100deg,#fff 0%,#F5F9FD 75%,#FFF4E7 100%);
+}
+
+/* Client cards */
+.client:hover{
+  background:linear-gradient(135deg,#fff,#FFF4E6);
+  border-color:var(--accent) !important;
+}
+
+/* Partner cards */
+.partner:hover{
+  background:linear-gradient(135deg,#fff 0%,#F4F8FD 65%,#FFF3E4 100%);
+}
+
+/* Statistics cards */
+.stat{
+  background:linear-gradient(145deg,#fff,#F7FAFD);
+}
+.stat:hover{
+  background:linear-gradient(145deg,#fff,#FFF4E5);
+  transform:translateY(-4px);
+}
+
+/* Icons transition from dark blue to orange */
+.service:hover .icon,
+.security-item:hover .icon{
+  background:linear-gradient(135deg,var(--accent),#FFB35C) !important;
+}
+
+/* Buttons have richer gradient transitions */
+.btn-primary{
+  background:linear-gradient(135deg,#F28C28,#FFAA4D) !important;
+  background-size:200% 100% !important;
+}
+.btn-primary:hover{
+  background:linear-gradient(135deg,#fff,#F5F9FD) !important;
+}
+.submit{
+  background:linear-gradient(135deg,#F28C28,#FFAA4D) !important;
+}
+.submit:hover{
+  background:linear-gradient(135deg,#062B5C,#0A4285) !important;
+}
+
+/* Section headings get a subtle accent underline */
+.section-head > div:first-child:after{
+  background:linear-gradient(90deg,var(--primary),var(--accent)) !important;
+}
+
+/* Contact gradient */
+.contact{
+  background:
+    radial-gradient(circle at 10% 15%,rgba(242,140,40,.16),transparent 26%),
+    radial-gradient(circle at 90% 85%,rgba(10,66,133,.45),transparent 30%),
+    linear-gradient(135deg,#031B3A,#062B5C 60%,#083B73) !important;
+}
+
+/* Contact form warm/cool contrast */
+.contact form{
+  background:linear-gradient(145deg,#fff 0%,#F9FBFD 75%,#FFF5E9 100%);
+}
+
+/* Brand logo gets a subtle orange-blue interaction */
+.brand-mark:hover{
+  background:linear-gradient(135deg,#062B5C,#0A4285) !important;
+  border-color:#FFAA4D !important;
+  transform:rotate(-2deg) scale(1.03);
+}
+
+/* Elegant italic emphasis */
+.section-head p{
+  font-style:italic;
+}
+.hero-card h3{
+  font-style:italic;
+}
+.security-item span{
+  font-style:normal;
+}
+
+/* Responsive typography */
+@media(max-width:600px){
+  .hero h1{
+    letter-spacing:-1.2px;
+  }
+  #about .about-copy p:first-of-type{
+    font-size:16px;
+  }
+}
+
+  
+/* =========================================================
+   SOLUTIONS + TEAM + JAVASCRIPT MOTION
+   ========================================================= */
+
+.solution-showcase{
+  grid-template-columns:repeat(3,1fr);
+}
+.solution-card{
+  min-height:270px;
+}
+.solution-card .icon i{
+  font-size:20px;
+}
+
+.team-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+.team-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-top:5px solid var(--primary);
+  border-radius:18px;
+  padding:30px;
+  box-shadow:var(--shadow-sm);
+  position:relative;
+  overflow:hidden;
+  transition:all .4s ease;
+}
+.team-card::before{
+  content:"";
+  position:absolute;
+  width:170px;
+  height:170px;
+  right:-90px;
+  top:-90px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(242,140,40,.18),transparent 68%);
+  pointer-events:none;
+}
+.team-card:hover{
+  border-top-color:var(--accent);
+  box-shadow:var(--shadow-md);
+}
+.team-avatar{
+  width:74px;
+  height:74px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(135deg,var(--primary),var(--primary-mid));
+  color:#fff;
+  border:4px solid var(--accent);
+  font-family:"Space Grotesk",sans-serif;
+  font-size:19px;
+  font-weight:700;
+  margin-bottom:20px;
+}
+.team-role{
+  display:inline-block;
+  color:var(--accent-dark);
+  font-size:12px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  margin-bottom:7px;
+}
+.team-card h3{
+  color:var(--primary);
+  font-family:"Manrope",sans-serif;
+  font-weight:800;
+  margin-bottom:12px;
+}
+.team-card p{
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.7;
+}
+.team-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-top:18px;
+}
+.team-tags span{
+  background:var(--accent-soft);
+  color:var(--primary);
+  border:1px solid #F6D2AA;
+  border-radius:999px;
+  padding:5px 9px;
+  font-size:11px;
+  font-weight:700;
+}
+.team-note{
+  display:flex;
+  gap:16px;
+  align-items:flex-start;
+  margin-top:25px;
+  padding:20px 24px;
+  border-left:4px solid var(--accent);
+  background:linear-gradient(90deg,#F5F8FC,#FFF7ED);
+  border-radius:0 14px 14px 0;
+  box-shadow:var(--shadow-sm);
+}
+.team-note > i{
+  color:var(--accent-dark);
+  font-size:24px;
+  margin-top:2px;
+}
+.team-note strong{
+  color:var(--primary);
+  font-family:"Manrope",sans-serif;
+}
+.team-note p{
+  margin:4px 0 0;
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* Scroll reveal */
+.reveal-on-scroll{
+  opacity:0;
+  transform:translateY(28px);
+  transition:
+    opacity .7s ease var(--reveal-delay,0ms),
+    transform .7s cubic-bezier(.2,.75,.25,1) var(--reveal-delay,0ms);
+}
+.reveal-on-scroll.is-visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* Active navigation */
+.navlinks a.active-nav{
+  color:var(--accent) !important;
+  position:relative;
+}
+.navlinks a.active-nav:not(.nav-cta)::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:-8px;
+  height:3px;
+  border-radius:3px;
+  background:var(--accent);
+}
+
+/* Mouse-reactive hero glow */
+.hero::before{
+  left:var(--mouse-x,auto);
+  top:var(--mouse-y,auto);
+  transform:translate(-50%,-50%);
+  transition:left .18s ease,top .18s ease;
+}
+
+/* Respect reduced-motion preferences */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    scroll-behavior:auto !important;
+    transition-duration:.01ms !important;
+  }
+  .reveal-on-scroll{
+    opacity:1;
+    transform:none;
+  }
+}
+
+@media(max-width:900px){
+  .solution-showcase,.team-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+@media(max-width:600px){
+  .solution-showcase,.team-grid{
+    grid-template-columns:1fr;
+  }
+  .team-card{
+    padding:24px;
+  }
+  .team-note{
+    padding:18px;
+  }
+}
+
+  
+/* =========================================================
+   IT BACKGROUND IMAGERY
+   Subtle technology photography with high-contrast overlays
+   ========================================================= */
+
+.hero{
+  background-image:
+    linear-gradient(90deg,rgba(3,27,58,.96) 0%,rgba(6,43,92,.91) 52%,rgba(6,43,92,.78) 100%),
+    url("https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1800&q=85") !important;
+  background-size:cover !important;
+  background-position:center !important;
+  background-attachment:scroll !important;
+}
+
+#about{
+  background-image:
+    linear-gradient(90deg,rgba(245,248,252,.97),rgba(245,248,252,.88)),
+    url("https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1800&q=80");
+  background-size:cover;
+  background-position:center;
+}
+
+#solutions{
+  background-image:
+    linear-gradient(135deg,rgba(255,255,255,.96),rgba(248,251,255,.90)),
+    url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1800&q=80");
+  background-size:cover;
+  background-position:center;
+}
+
+#security{
+  background-image:
+    linear-gradient(120deg,rgba(245,248,252,.96),rgba(234,240,247,.90)),
+    url("https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1800&q=80");
+  background-size:cover;
+  background-position:center;
+}
+
+#team{
+  background-image:
+    linear-gradient(135deg,rgba(245,248,252,.95),rgba(245,248,252,.88)),
+    url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1800&q=80");
+  background-size:cover;
+  background-position:center;
+}
+
+#clients{
+  background-image:
+    linear-gradient(135deg,rgba(255,255,255,.96),rgba(248,251,255,.91)),
+    url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=80");
+  background-size:cover;
+  background-position:center;
+}
+
+.contact{
+  background-image:
+    linear-gradient(120deg,rgba(3,27,58,.96),rgba(6,43,92,.91)),
+    url("https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1800&q=85") !important;
+  background-size:cover !important;
+  background-position:center !important;
+}
+
+/* Keep cards readable over photographic backgrounds */
+#about .quote,
+#solutions .service,
+#security .security-item,
+#team .team-card,
+#clients .client,
+#clients .stat,
+#clients .partners-grid{
+  backdrop-filter:blur(5px);
+}
+
+/* Gentle image depth on desktop */
+@media(min-width:901px){
+  #about,#solutions,#security,#team,#clients{
+    background-attachment:fixed;
+  }
+}
+
+/* Avoid fixed backgrounds on mobile for smoother scrolling */
+@media(max-width:900px){
+  #about,#solutions,#security,#team,#clients{
+    background-attachment:scroll;
+  }
+}
+
+  
+/* Circular Nissi Technologies logo */
+.brand-mark{
+  width:64px !important;
+  height:64px !important;
+  min-width:64px;
+  border-radius:50% !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  overflow:hidden !important;
+  padding:0 !important;
+  background:var(--primary) !important;
+  border:3px solid var(--accent) !important;
+  box-shadow:0 8px 22px rgba(6,43,92,.28);
+  position:relative;
+}
+
+.brand-mark img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  border-radius:50% !important;
+  display:block;
+}
+
+.brand-mark i,
+.brand-mark svg{
+  border-radius:50%;
+}
+
+.brand-mark:hover{
+  transform:scale(1.06) rotate(-2deg);
+  border-color:#FFB35C !important;
+  box-shadow:0 10px 28px rgba(242,140,40,.30);
+}
+
+@media(max-width:600px){
+  .brand-mark{
+    width:54px !important;
+    height:54px !important;
+    min-width:54px;
+  }
+}
+.about-section { padding: 100px 0; background: #f8fafc; position: relative; overflow: hidden; } 
+.section-heading { max-width: 750px; margin: auto; } 
+.kicker { display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 2px; color: #0d6efd; margin-bottom: 12px; } 
+.section-heading h2 { font-size: clamp(32px, 4vw, 48px); font-weight: 800; line-height: 1.15; color: #172033; margin-bottom: 18px; } 
+.section-heading h2 span { color: #0d6efd; } .section-heading p { color: #687386; font-size: 17px; line-height: 1.7; } 
+/* ABOUT COPY */ 
+.about-label { display: inline-flex; align-items: center; gap: 8px; background: #eaf2ff; color: #0d6efd; padding: 9px 15px; border-radius: 50px; font-size: 13px; font-weight: 700; margin-bottom: 20px; } 
+.about-copy h3 { font-size: 36px; font-weight: 800; line-height: 1.2; color: #172033; margin-bottom: 22px; } 
+.about-copy h3 strong { color: #0d6efd; } 
+.about-copy p { color: #657083; font-size: 16px; line-height: 1.8; margin-bottom: 16px; } 
+/* QUOTE */ 
+.about-quote { display: flex; align-items: center; gap: 15px; padding: 20px; margin: 25px 0; border-left: 4px solid #0d6efd; background: #ffffff; border-radius: 0 12px 12px 0; box-shadow: 0 8px 25px rgba(0,0,0,.05); } .quote-icon { width: 42px; height: 42px; border-radius: 50%; background: #eaf2ff; color: #0d6efd; display: flex; align-items: center; justify-content: center; } 
+.about-quote p { margin: 0; font-weight: 700; color: #172033; font-style: italic; } 
+.about-quote small { color: #7a8494; }
+ /* BUTTON */ 
+ .about-btn { padding: 13px 22px; border-radius: 8px; font-weight: 600; display: inline-flex; align-items: center; gap: 10px; transition: .3s ease; } .about-btn:hover { transform: translateY(-3px); } 
+ /* TECHNOLOGY VISUAL */ 
+ .about-visual { position: relative; min-height: 500px; display: flex; align-items: center; justify-content: center; } 
+ .technology-card { width: 100%; max-width: 500px; min-height: 440px; border-radius: 28px; background: linear-gradient(145deg, #101a2d, #172b4d); padding: 30px; position: relative; overflow: hidden; box-shadow: 0 30px 70px rgba(20,40,80,.22); } 
+ .technology-card::before { content: ""; position: absolute; width: 300px; height: 300px; border-radius: 50%; background: rgba(13,110,253,.15); top: -120px; right: -100px; } 
+ .tech-card-header { display: flex; align-items: center; gap: 14px; position: relative; z-index: 2; } 
+ .tech-logo { width: 55px; height: 55px; border-radius: 15px; background: rgba(255,255,255,.1); color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 23px; } 
+ .tech-card-header span { display: block; color: #8fa2c1; font-size: 10px; letter-spacing: 2px; } 
+ .tech-card-header strong { color: #ffffff; font-size: 22px; } /* NETWORK */ .tech-network { height: 275px; position: relative; } 
+ .central-node { width: 105px; height: 105px; border-radius: 50%; background: #0d6efd; color: #ffffff; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; box-shadow: 0 0 0 15px rgba(13,110,253,.08), 0 0 50px rgba(13,110,253,.35); z-index: 5; } 
+ .central-node i { font-size: 27px; } 
+ .central-node span { font-size: 11px; font-weight: 700; } 
+ /* ORBIT NODES */
+  .orbit-node { position: absolute; width: 55px; height: 55px; border-radius: 50%; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.15); color: #ffffff; display: flex; align-items: center; justify-content: center; z-index: 4; } 
+  .orbit-1 { left: 8%; top: 20%; } 
+  .orbit-2 { right: 8%; top: 20%; } 
+  .orbit-3 { left: 8%; bottom: 10%; } 
+  .orbit-4 { right: 8%; bottom: 10%; }
+   /* CONNECTION LINES */ 
+   .connection-line { height: 1px; background: rgba(255,255,255,.15); position: absolute; width: 160px; left: 50%; top: 50%; transform-origin: left center; } 
+   .line-1 { transform: rotate(200deg); } 
+   .line-2 { transform: rotate(340deg); } 
+   .line-3 { transform: rotate(155deg); } 
+   .line-4 { transform: rotate(25deg); }
+    /* CARD FOOTER */ 
+    .tech-card-footer { position: absolute; left: 30px; right: 30px; bottom: 25px; display: flex; justify-content: space-between; border-top: 1px solid rgba(255,255,255,.1); padding-top: 18px; } 
+    .tech-card-footer div { text-align: center; } 
+    .tech-card-footer strong { display: block; color: #ffffff; font-size: 20px; } 
+    .tech-card-footer span { display: block; color: #91a0b7; font-size: 11px; } 
+    /* EXPERIENCE BADGE */ 
+    .experience-badge { position: absolute; left: -20px; bottom: 35px; background: #ffffff; padding: 15px 20px; border-radius: 15px; display: flex; align-items: center; gap: 12px; box-shadow: 0 15px 40px rgba(0,0,0,.12); } 
+    .badge-icon { width: 42px; height: 42px; border-radius: 12px; background: #eaf2ff; color: #0d6efd; display: flex; align-items: center; justify-content: center; } 
+    .experience-badge strong { display: block; color: #172033; } 
+    .experience-badge span { font-size: 12px; color: #7a8494; } 
+    /* MISSION & VISION */ 
+    .mv-card { height: 100%; display: flex; gap: 22px; padding: 35px; border-radius: 20px; background: #ffffff; border: 1px solid #edf0f5; transition: .3s ease; }
+     .mv-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(20,40,80,.08); } 
+     .mv-icon { min-width: 65px; height: 65px; border-radius: 17px; background: #eaf2ff; color: #0d6efd; display: flex; align-items: center; justify-content: center; font-size: 25px; } 
+     .mv-content span { font-size: 12px; letter-spacing: 2px; font-weight: 800; color: #0d6efd; } 
+     .mv-content h3 { font-size: 22px; font-weight: 750; margin: 8px 0 12px; color: #172033; } 
+     .mv-content p { color: #687386; line-height: 1.7; margin: 0; } 
+     /* CORE VALUES */ 
+     .values-title { font-size: 32px; font-weight: 800; color: #172033; } 
+     .values-section > .text-center p { color: #687386; } 
+     .value-card { height: 100%; padding: 28px; background: #ffffff; border-radius: 18px; text-align: center; border: 1px solid #edf0f5; transition: .3s ease; } 
+     .value-card:hover { transform: translateY(-7px); box-shadow: 0 18px 40px rgba(20,40,80,.08); }
+      .value-icon { width: 60px; height: 60px; margin: auto; margin-bottom: 18px; border-radius: 16px; background: #eaf2ff; color: #0d6efd; display: flex; align-items: center; justify-content: center; font-size: 22px; } 
+      .value-card h4 { font-size: 18px; font-weight: 750; color: #172033; } 
+      .value-card p { color: #687386; font-size: 14px; line-height: 1.7; } 
+      /* HIGHLIGHTS */ 
+      .about-highlights { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; background: #ffffff; padding: 25px; border-radius: 20px; box-shadow: 0 15px 45px rgba(20,40,80,.06); } 
+      .highlight-item { display: flex; align-items: center; justify-content: center; gap: 12px; padding: 12px; } 
+      .highlight-icon { width: 48px; height: 48px; border-radius: 13px; background: #eaf2ff; color: #0d6efd; display: flex; align-items: center; justify-content: center; } 
+      .highlight-item strong { display: block; font-size: 18px; color: #172033; } 
+      .highlight-item span { display: block; font-size: 12px; color: #7a8494; }
+       /* RESPONSIVE */
+
+        @media (max-width: 991px) { 
+          .about-section { padding: 70px 0; } 
+          .about-copy h3 { font-size: 30px; } 
+          .about-visual { min-height: 450px; margin-top: 20px; } 
+          .about-highlights { grid-template-columns: repeat(2, 1fr); } }
+           @media (max-width: 576px) { 
+            .about-section { padding: 60px 0; } 
+            .mv-card { flex-direction: column; } 
+            .about-visual { min-height: 420px; } 
+            .technology-card { min-height: 400px; padding: 22px; } 
+            .experience-badge { left: 0; bottom: 15px; } 
+            .about-highlights { grid-template-columns: 1fr; } 
+            .tech-card-footer { left: 20px; right: 20px; }
+           }
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.hero {
+  position: relative;
+  min-height: 760px;
+
+  padding: 55px 0 0;
+
+  overflow: hidden;
+
+  background: #061a31;
+  color: #ffffff;
+
+  isolation: isolate;
+}
+
+
+/* =========================================================
+   BACKGROUND GRID
+========================================================= */
+
+.hero-grid-bg {
+  position: absolute;
+  inset: 0;
+
+  z-index: -3;
+
+  opacity: 0.3;
+
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 50px 50px;
+
+  mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    transparent 90%
+  );
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+========================================================= */
+
+.hero-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(100px);
+
+  z-index: -2;
+
+  pointer-events: none;
+}
+
+.hero-glow-1 {
+  width: 450px;
+  height: 450px;
+
+  right: 3%;
+  top: 0;
+
+  background: rgba(0, 153, 255, 0.13);
+}
+
+.hero-glow-2 {
+  width: 350px;
+  height: 350px;
+
+  left: 0;
+  bottom: 5%;
+
+  background: rgba(0, 220, 180, 0.07);
+}
+
+
+/* =========================================================
+   HERO MAIN LAYOUT
+========================================================= */
+
+.hero-main {
+  position: relative;
+
+  min-height: 610px;
+
+  align-items: flex-start;
+}
+
+
+/* =========================================================
+   LEFT HERO CONTENT
+========================================================= */
+
+.hero-content {
+  position: relative;
+
+  z-index: 20;
+
+  padding-right: 35px;
+
+  padding-top: 20px;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 24px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 1.8px;
+
+  color: #91aac4;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #22d5a6;
+
+  box-shadow:
+    0 0 10px rgba(34,213,166,0.8);
+}
+
+.eyebrow-divider {
+  color: #496783;
+}
+
+
+/* =========================================================
+   HERO HEADING
+========================================================= */
+
+.hero h1 {
+  max-width: 720px;
+
+  margin: 0 0 25px;
+
+  font-size: clamp(48px, 5vw, 75px);
+
+  line-height: 1.03;
+
+  font-weight: 800;
+
+  letter-spacing: -3px;
+
+  color: #ffffff;
+}
+
+.hero h1 span {
+  display: block;
+
+  background:
+    linear-gradient(
+      90deg,
+      #ffffff 0%,
+      #55c9ff 100%
+    );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.hero-description {
+  max-width: 650px;
+
+  margin: 0 0 32px;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+
+  color: #a9bfd3;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.hero-buttons {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 14px;
+
+  margin-bottom: 38px;
+}
+
+.hero-buttons .btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  min-height: 54px;
+
+  padding: 14px 22px;
+
+  border-radius: 9px;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+
+/* Primary */
+.hero-primary {
+  color: #071522;
+
+  background: #ffffff;
+
+  border: 1px solid #ffffff;
+}
+
+.hero-primary:hover {
+  color: #071522;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 30px rgba(0,0,0,0.25);
+}
+
+
+/* Secondary */
+.hero-secondary {
+  color: #ffffff;
+
+  background: rgba(255,255,255,0.035);
+
+  border: 1px solid rgba(255,255,255,0.16);
+}
+
+.hero-secondary:hover {
+  color: #ffffff;
+
+  background: rgba(255,255,255,0.08);
+
+  border-color: rgba(255,255,255,0.35);
+
+  transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   TRUST INDICATORS
+========================================================= */
+
+.hero-trust {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 28px;
+}
+
+.trust-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.trust-icon {
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: rgba(255,255,255,0.06);
+
+  border: 1px solid rgba(255,255,255,0.1);
+
+  color: #54d7b4;
+
+  font-size: 12px;
+}
+
+.trust-item strong,
+.trust-item span {
+  display: block;
+}
+
+.trust-item strong {
+  font-size: 13px;
+
+  color: #ffffff;
+}
+
+.trust-item span {
+  margin-top: 2px;
+
+  font-size: 11px;
+
+  color: #748ca3;
+}
+
+
+/* =========================================================
+   RIGHT TECHNOLOGY VISUAL
+========================================================= */
+
+.hero-visual {
+  position: absolute;
+
+  top: 20px;
+  right: 0;
+
+  width: 41.666667%;
+
+  max-width: 500px;
+
+  min-height: 500px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: center;
+
+  z-index: 15;
+}
+
+
+/* =========================================================
+   TECHNOLOGY CARD
+========================================================= */
+
+.hero-tech-card {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 430px;
+
+  padding: 22px;
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(18,39,62,0.97),
+      rgba(7,19,32,0.99)
+    );
+
+  border: 1px solid rgba(107,181,255,0.18);
+
+  box-shadow:
+    0 35px 80px rgba(0,0,0,0.4),
+    inset 0 1px 0 rgba(255,255,255,0.05);
+
+  backdrop-filter: blur(20px);
+
+  z-index: 5;
+}
+
+
+/* =========================================================
+   TECH HEADER
+========================================================= */
+
+.tech-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.tech-brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.tech-brand-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: rgba(65,181,255,0.12);
+
+  border: 1px solid rgba(65,181,255,0.2);
+
+  color: #55c9ff;
+}
+
+.tech-brand-text small,
+.tech-brand-text strong {
+  display: block;
+}
+
+.tech-brand-text small {
+  color: #6d8399;
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+}
+
+.tech-brand-text strong {
+  font-size: 12px;
+
+  letter-spacing: 1px;
+}
+
+.online-status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  font-size: 9px;
+
+  letter-spacing: 1px;
+
+  color: #70dfbd;
+}
+
+.online-status span {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #39d6a4;
+
+  box-shadow:
+    0 0 10px rgba(57,214,164,0.8);
+}
+
+
+/* =========================================================
+   NETWORK AREA
+========================================================= */
+
+.hero-network {
+  position: relative;
+
+  height: 300px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin: 5px 0;
+}
+
+
+/* Rings */
+.network-ring {
+  position: absolute;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(79,178,255,0.14);
+}
+
+.ring-1 {
+  width: 145px;
+  height: 145px;
+}
+
+.ring-2 {
+  width: 215px;
+  height: 215px;
+}
+
+.ring-3 {
+  width: 285px;
+  height: 285px;
+
+  border-style: dashed;
+
+  animation:
+    rotateRing 20s linear infinite;
+}
+
+@keyframes rotateRing {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+/* =========================================================
+   NETWORK CENTER
+========================================================= */
+
+.network-center {
+  position: relative;
+
+  z-index: 5;
+
+  width: 105px;
+  height: 105px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(47,154,220,0.2),
+      rgba(7,22,37,0.98)
+    );
+
+  border: 1px solid rgba(82,188,255,0.35);
+
+  box-shadow:
+    0 0 40px rgba(48,170,240,0.15);
+}
+
+.network-center i {
+  margin-bottom: 5px;
+
+  font-size: 24px;
+
+  color: #55c9ff;
+}
+
+.network-center strong {
+  font-size: 17px;
+
+  letter-spacing: 1px;
+}
+
+.network-center small {
+  margin-top: 2px;
+
+  font-size: 6px;
+
+  letter-spacing: 1.5px;
+
+  color: #7893aa;
+}
+
+
+/* =========================================================
+   NETWORK NODES
+========================================================= */
+
+.network-node {
+  position: absolute;
+
+  z-index: 6;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 5px;
+
+  font-size: 10px;
+
+  color: #8ca3b8;
+}
+
+.node-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #0b2238;
+
+  border: 1px solid rgba(85,201,255,0.2);
+
+  color: #55c9ff;
+
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.25);
+}
+
+.node-top {
+  top: 8px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.node-right {
+  right: 3px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+}
+
+.node-bottom {
+  bottom: 8px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.node-left {
+  left: 3px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+}
+
+
+/* =========================================================
+   CONNECTING LINES
+========================================================= */
+
+.network-line {
+  position: absolute;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(72,180,255,0.35),
+      transparent
+    );
+}
+
+.line-top,
+.line-bottom {
+  width: 1px;
+
+  height: 85px;
+}
+
+.line-top {
+  top: 68px;
+}
+
+.line-bottom {
+  bottom: 68px;
+}
+
+.line-left,
+.line-right {
+  height: 1px;
+
+  width: 85px;
+}
+
+.line-left {
+  left: 68px;
+}
+
+.line-right {
+  right: 68px;
+}
+
+
+/* =========================================================
+   SERVICE STATUS
+========================================================= */
+
+.service-status {
+  padding-top: 15px;
+
+  border-top:
+    1px solid rgba(255,255,255,0.08);
+}
+
+.status-row {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 7px 0;
+
+  font-size: 11px;
+
+  color: #8095a9;
+}
+
+.status-row > div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.status-row strong {
+  font-size: 10px;
+
+  color: #5bd9b4;
+}
+
+.mini-status {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #42d5aa;
+
+  box-shadow:
+    0 0 8px rgba(66,213,170,0.7);
+}
+
+
+/* =========================================================
+   FLOATING CARDS
+========================================================= */
+
+.floating-card {
+  position: absolute;
+
+  z-index: 20;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 12px 15px;
+
+  border-radius: 13px;
+
+  background: rgba(11,28,45,0.94);
+
+  border:
+    1px solid rgba(255,255,255,0.1);
+
+  box-shadow:
+    0 18px 35px rgba(0,0,0,0.3);
+
+  backdrop-filter: blur(12px);
+}
+
+.floating-icon {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: rgba(75,188,255,0.1);
+
+  color: #55c9ff;
+}
+
+.floating-card strong,
+.floating-card span {
+  display: block;
+}
+
+.floating-card strong {
+  font-size: 15px;
+
+  color: #ffffff;
+}
+
+.floating-card span {
+  margin-top: 2px;
+
+  font-size: 9px;
+
+  color: #7f95aa;
+}
+
+
+/* Floating card positions */
+.experience-card {
+  left: -25px;
+
+  top: 65px;
+}
+
+.support-card {
+  right: -20px;
+
+  bottom: 70px;
+}
+
+
+/* =========================================================
+   DECORATIVE DOTS
+========================================================= */
+
+.hero-dots {
+  position: absolute;
+
+  width: 70px;
+  height: 70px;
+
+  opacity: 0.35;
+
+  background-image:
+    radial-gradient(
+      rgba(85,201,255,0.6) 1px,
+      transparent 1px
+    );
+
+  background-size: 10px 10px;
+}
+
+.dots-1 {
+  top: 0;
+
+  right: -10px;
+}
+
+.dots-2 {
+  bottom: 10px;
+
+  left: -10px;
+}
+
+
+/* =========================================================
+   HERO BOTTOM STRIP
+========================================================= */
+
+.hero-bottom {
+  position: relative;
+
+  min-height: 90px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  border-top:
+    1px solid rgba(255,255,255,0.08);
+
+  z-index: 5;
+}
+
+.hero-bottom-title span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+
+  color: #637b91;
+}
+
+.hero-bottom-title strong {
+  font-size: 13px;
+
+  color: #ffffff;
+}
+
+.hero-services {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  flex-wrap: wrap;
+
+  gap: 22px;
+}
+
+.hero-services span {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  font-size: 10px;
+
+  color: #71879b;
+}
+
+.hero-services i {
+  color: #55c9ff;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1200px) {
+
+  .hero-visual {
+    top: 20px;
+
+    right: -10px;
+
+    width: 500px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+  .hero {
+    padding-top: 70px;
+  }
+
+  .hero-main {
+    min-height: auto;
+  }
+
+  .hero-content {
+    padding-right: 0;
+
+    text-align: center;
+  }
+
+  .eyebrow {
+    justify-content: center;
+  }
+
+  .hero h1 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons,
+  .hero-trust {
+    justify-content: center;
+  }
+
+
+  /* Return panel to normal document flow */
+  .hero-visual {
+    position: relative;
+
+    top: auto;
+    right: auto;
+
+    width: 100%;
+
+    max-width: 500px;
+
+    min-height: 500px;
+
+    margin: 65px auto 0;
+  }
+
+
+  .hero-bottom {
+    margin-top: 40px;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 25px 0;
+
+    text-align: center;
+  }
+
+  .hero-services {
+    justify-content: center;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 575px) {
+
+  .hero {
+    padding-top: 55px;
+
+    min-height: auto;
+  }
+
+  .hero h1 {
+    font-size: 43px;
+
+    letter-spacing: -2px;
+  }
+
+  .hero-description {
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
+  .hero-trust {
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 15px;
+  }
+
+
+  .hero-visual {
+    min-height: 430px;
+
+    margin-top: 55px;
+  }
+
+
+  .hero-tech-card {
+    padding: 15px;
+
+    border-radius: 18px;
+  }
+
+
+  .hero-network {
+    height: 275px;
+  }
+
+
+  .ring-1 {
+    width: 130px;
+    height: 130px;
+  }
+
+  .ring-2 {
+    width: 190px;
+    height: 190px;
+  }
+
+  .ring-3 {
+    width: 245px;
+    height: 245px;
+  }
+
+
+  .experience-card {
+    left: -5px;
+
+    top: 55px;
+
+    transform: scale(0.82);
+  }
+
+  .support-card {
+    right: -5px;
+
+    bottom: 55px;
+
+    transform: scale(0.82);
+  }
+
+
+  .hero-bottom {
+    margin-top: 30px;
+  }
+
+  .hero-services {
+    gap: 12px 18px;
+
+    justify-content: center;
+  }
+
+}
+/* =========================================================
+   ABOUT TECHNOLOGY ECOSYSTEM
+   ========================================================= */
+
+.capability-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.capability-card::after {
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    right: -100px;
+    bottom: -120px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(242, 140, 40, .15),
+        transparent 70%
+    );
+    pointer-events: none;
+}
+
+.capability-card .tech-card-header span {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 4px;
+}
+
+.capability-card .tech-card-header strong {
+    display: block;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+/* Central node */
+
+.capability-card .central-node {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-mid)
+    );
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+    box-shadow: 0 15px 40px rgba(6,43,92,.25);
+}
+
+.capability-card .central-node i {
+    font-size: 28px;
+}
+
+.capability-card .central-node span {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .5px;
+}
+
+/* Orbit nodes */
+
+.capability-card .orbit-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.capability-card .orbit-node i {
+    font-size: 22px;
+}
+
+.capability-card .orbit-node small {
+    font-size: 9px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* Footer */
+
+.capability-footer > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.capability-footer i {
+    font-size: 18px;
+    color: var(--accent);
+    margin-bottom: 4px;
+}
+
+.capability-footer strong {
+    font-size: 14px;
+}
+
+.capability-footer span {
+    font-size: 11px;
+    color: var(--muted);
+}
+
+/* Floating badge */
+
+.capability-badge {
+    max-width: 260px;
+}
+
+.capability-badge .badge-icon {
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-mid)
+    );
+}
+
+.capability-badge strong {
+    display: block;
+    font-size: 14px;
+}
+
+.capability-badge span {
+    display: block;
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 3px;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .capability-card .central-node {
+        width: 100px;
+        height: 100px;
+    }
+
+    .capability-card .central-node i {
+        font-size: 23px;
+    }
+
+    .capability-card .tech-card-header strong {
+        font-size: 15px;
+    }
+
+    .capability-badge {
+        max-width: 220px;
+    }
+}
+
+/* =========================================================
+   CLIENT / ORGANIZATION LOGOS
+   ========================================================= */
+
+.clients {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.client {
+    min-height: 145px;
+    padding: 20px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+
+    text-align: center;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+}
+
+.client img {
+    width: 72px;
+    height: 62px;
+    object-fit: contain;
+    display: block;
+
+    transition:
+        transform .35s ease,
+        filter .35s ease;
+}
+
+.client span {
+    font-family: "DM Sans", Arial, sans-serif;
+    font-size: 11px;
+    line-height: 1.35;
+    font-weight: 700;
+    color: #34495e;
+}
+
+/* Hover */
+
+.client:hover {
+    transform: translateY(-7px);
+    border-color: rgba(242, 140, 40, .55);
+    box-shadow: 0 15px 35px rgba(6, 43, 92, .10);
+}
+
+.client:hover img {
+    transform: scale(1.08);
+}
+
+/* Tablet */
+
+@media (max-width: 1100px) {
+    .clients {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Small tablet */
+
+@media (max-width: 800px) {
+    .clients {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .clients {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .client {
+        min-height: 125px;
+        padding: 15px 10px;
+    }
+
+    .client img {
+        width: 60px;
+        height: 52px;
+    }
+
+    .client span {
+        font-size: 10px;
+    }
+}
+
+.licensing-section {
+        margin-top: 25px;
+    }
+
+    .licensing-title {
+        font-size: 13px;
+        font-weight: 600;
+        color: #777;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .licensing-badges {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .license-badge {
+        min-width: 170px;
+        min-height: 100px;
+        padding: 12px 18px;
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        border-radius: 10px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        transition: all 0.3s ease;
+    }
+
+    .license-logo {
+        width: 65px;
+        height: 55px;
+        object-fit: contain;
+        margin-bottom: 8px;
+    }
+
+    .license-badge small {
+        font-size: 10px;
+        line-height: 1.3;
+        color: #777;
+        text-align: center;
+        max-width: 170px;
+    }
+
+    .license-badge:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    @media (max-width: 576px) {
+        .licensing-badges {
+            gap: 8px;
+        }
+
+        .license-badge {
+            min-width: 140px;
+            padding: 10px;
+        }
+
+        .license-logo {
+            width: 55px;
+            height: 48px;
+        }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container">
+      <div><span>📍 Plot 2 Colville Street, Shumuk House, 2nd Floor, Suite 51, Kampala</span></div>
+      <div><span>☎ +256 414 698606</span><span>✉ info@nissitech.co.ug</span></div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container">
+      <nav>
+<a href="#home" class="brand">
+  <span class="brand-mark">
+    <img src="images/logo.jpg" alt="Nissi Technologies Logo">
+  </span>
+
+  <span class="brand-name">
+    NISSI TECHNOLOGIES LIMITED
+    <small>ICT SOLUTIONS &amp; INFRASTRUCTURE</small>
+  </span>
+</a>
+        <div class="navlinks" id="navLinks">
+          <a href="#about">About</a><a href="#solutions">Solutions</a><a href="#security">Security</a><a href="#team">Team</a><a href="#clients">Clients</a><a href="#contact" class="nav-cta">Contact Us</a>
+        </div>
+        <button class="menu" id="menuToggle" aria-label="Open menu">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+<!-- ========================= HERO SECTION ========================= -->
+<section class="hero" id="home">
+
+  <!-- Background Effects -->
+  <div class="hero-grid-bg"></div>
+  <div class="hero-glow hero-glow-1"></div>
+  <div class="hero-glow hero-glow-2"></div>
+
+  <div class="container">
+
+    <!-- ========================= HERO MAIN ========================= -->
+    <div class="row hero-main">
+
+      <!-- ========================= LEFT CONTENT ========================= -->
+      <div class="col-lg-7">
+
+        <div class="hero-content">
+
+          <!-- Eyebrow -->
+          <div class="eyebrow">
+            <span class="status-dot"></span>
+            ESTABLISHED 19/06/2004
+            <span class="eyebrow-divider">|</span>
+            UGANDA'S ICT PARTNER
+          </div>
+
+          <!-- Heading -->
+          <h1>
+            Technology that
+            <span>works for your business.</span>
+          </h1>
+
+          <!-- Description -->
+          <p class="hero-description">
+            From ICT infrastructure and hardware procurement to system
+            implementation, maintenance and technical support, Nissi
+            Technologies delivers dependable technology solutions designed
+            around the way your organization operates.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="hero-buttons">
+
+            <a href="#contact" class="btn hero-primary">
+              Request a Consultation
+              <i class="fas fa-arrow-right"></i>
+            </a>
+
+            <a href="#services" class="btn hero-secondary">
+              <i class="fas fa-th-large"></i>
+              Explore Our Services
+            </a>
+
+          </div>
+
+          <!-- Trust Indicators -->
+          <div class="hero-trust">
+
+            <div class="trust-item">
+              <div class="trust-icon">
+                <i class="fas fa-check"></i>
+              </div>
+
+              <div>
+                <strong>Reliable</strong>
+                <span>ICT Solutions</span>
+              </div>
+            </div>
+
+
+            <div class="trust-item">
+              <div class="trust-icon">
+                <i class="fas fa-headset"></i>
+              </div>
+
+              <div>
+                <strong>Professional</strong>
+                <span>Technical Support</span>
+              </div>
+            </div>
+
+
+            <div class="trust-item">
+              <div class="trust-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+
+              <div>
+                <strong>Secure</strong>
+                <span>Infrastructure</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ========================= RIGHT TECHNOLOGY PANEL ========================= -->
+      <div class="col-lg-5">
+
+        <div class="hero-visual">
+
+          <!-- Technology Dashboard -->
+          <div class="hero-tech-card">
+
+            <!-- Header -->
+            <div class="tech-header">
+
+              <div class="tech-brand">
+
+                <div class="tech-brand-icon">
+                  <i class="fas fa-microchip"></i>
+                </div>
+
+                <div class="tech-brand-text">
+                  <small>NISSI</small>
+                  <strong>TECHNOLOGIES</strong>
+                </div>
+
+              </div>
+
+              <div class="online-status">
+                <span></span>
+                SYSTEM ONLINE
+              </div>
+
+            </div>
+
+
+            <!-- Technology Network -->
+            <div class="hero-network">
+
+              <!-- Rings -->
+              <div class="network-ring ring-1"></div>
+              <div class="network-ring ring-2"></div>
+              <div class="network-ring ring-3"></div>
+
+              <!-- Connecting Lines -->
+              <div class="network-line line-top"></div>
+              <div class="network-line line-right"></div>
+              <div class="network-line line-bottom"></div>
+              <div class="network-line line-left"></div>
+
+
+              <!-- Central ICT Node -->
+              <div class="network-center">
+                <i class="fas fa-server"></i>
+                <strong>ICT</strong>
+                <small>INFRASTRUCTURE</small>
+              </div>
+
+
+              <!-- Cloud -->
+              <div class="network-node node-top">
+
+                <div class="node-icon">
+                  <i class="fas fa-cloud"></i>
+                </div>
+
+                <span>Cloud</span>
+
+              </div>
+
+
+              <!-- Network -->
+              <div class="network-node node-right">
+
+                <div class="node-icon">
+                  <i class="fas fa-network-wired"></i>
+                </div>
+
+                <span>Network</span>
+
+              </div>
+
+
+              <!-- Devices -->
+              <div class="network-node node-bottom">
+
+                <div class="node-icon">
+                  <i class="fas fa-laptop"></i>
+                </div>
+
+                <span>Devices</span>
+
+              </div>
+
+
+              <!-- Security -->
+              <div class="network-node node-left">
+
+                <div class="node-icon">
+                  <i class="fas fa-shield-alt"></i>
+                </div>
+
+                <span>Security</span>
+
+              </div>
+
+            </div>
+
+
+            <!-- Service Status -->
+            <div class="service-status">
+
+              <div class="status-row">
+
+                <div>
+                  <span class="mini-status"></span>
+                  Infrastructure
+                </div>
+
+                <strong>Active</strong>
+
+              </div>
+
+
+              <div class="status-row">
+
+                <div>
+                  <span class="mini-status"></span>
+                  Technical Support
+                </div>
+
+                <strong>Available</strong>
+
+              </div>
+
+
+              <div class="status-row">
+
+                <div>
+                  <span class="mini-status"></span>
+                  ICT Solutions
+                </div>
+
+                <strong>Ready</strong>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- ================= FLOATING EXPERIENCE CARD ================= -->
+          <div class="floating-card experience-card">
+
+            <div class="floating-icon">
+              <i class="fas fa-award"></i>
+            </div>
+
+            <div>
+              <strong>20+</strong>
+              <span>Years Experience</span>
+            </div>
+
+          </div>
+
+
+          <!-- ================= FLOATING SUPPORT CARD ================= -->
+          <div class="floating-card support-card">
+
+            <div class="floating-icon">
+              <i class="fas fa-headset"></i>
+            </div>
+
+            <div>
+              <strong>24/7</strong>
+              <span>Support Ready</span>
+            </div>
+
+          </div>
+
+
+          <!-- Decorative Elements -->
+          <div class="hero-dots dots-1"></div>
+          <div class="hero-dots dots-2"></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ========================= HERO BOTTOM STRIP ========================= -->
+    <div class="hero-bottom">
+
+      <div class="hero-bottom-title">
+
+        <span>POWERING</span>
+
+        <strong>
+          Better Business Through Technology
+        </strong>
+
+      </div>
+
+
+      <div class="hero-services">
+
+        <span>
+          <i class="fas fa-desktop"></i>
+          Hardware
+        </span>
+
+        <span>
+          <i class="fas fa-network-wired"></i>
+          Networking
+        </span>
+
+        <span>
+          <i class="fas fa-cloud"></i>
+          Cloud Solutions
+        </span>
+
+        <span>
+          <i class="fas fa-tools"></i>
+          Maintenance
+        </span>
+
+        <span>
+          <i class="fas fa-shield-alt"></i>
+          IT Security
+        </span>
+
+        <span>
+          <i class="fas fa-cogs"></i>
+          Managed IT
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+```
+                                                  
+
+    <!-- ========================= ABOUT US SECTION ========================= --> 
+     <section class="section about-section" id="about"> <div class="container"> <!-- Section Heading -->
+       <div class="section-heading text-center"> <span class="kicker">WHO WE ARE</span> 
+        <h2>Technology Solutions Built Around <span>Your Business.</span></h2> 
+        <p> Empowering organizations with reliable ICT solutions, professional support, and technology that delivers measurable value. 
+
+        </p> </div> 
+        <!-- Main About Content --> 
+         <div class="row align-items-center g-5 mt-4">
+           <!-- Left Content --> 
+            <div class="col-lg-6"> 
+              <div class="about-copy"> 
+                <span class="about-label"> 
+                  <i class="fas fa-building"></i> Nissi Technologies Limited </span> 
+                  <h3> Your Trusted Partner in <strong>ICT Solutions & Services</strong> </h3> 
+                  <p> Nissi Technologies Limited is a Ugandan private ICT company established in <strong>2004</strong>, providing reliable computer supplies, technology solutions, system design, maintenance, upgrading, consultancy and technical support services. </p> 
+                  <p> Over the years, we have supported private and public institutions, non-governmental organizations, civil society organizations and businesses with practical technology solutions designed to improve productivity, efficiency, communication and service delivery. </p> 
+                  <p> Our approach is simple: <strong>understand your needs, recommend the right technology, implement it professionally, and remain available when you need support.</strong> </p> 
+                  <!-- Quote --> 
+                   <div class="about-quote"> 
+                    <div class="quote-icon"> 
+                      <i class="fas fa-quote-left"></i> 
+                    </div> 
+                    <div> 
+                      <p> “You demand it, we deliver it.” </p> 
+                      <small>— Nissi Technologies Limited</small> 
+                    </div> 
+                  </div> 
+                  <a href="#services" class="btn btn-primary about-btn"> Explore Our Services <i class="fas fa-arrow-right"></i> </a> 
+                </div>
+               </div>
+             <!-- Right Visual -->
+<div class="col-lg-6">
+  <div class="about-visual">
+
+    <!-- Technology Ecosystem Card -->
+    <div class="technology-card capability-card">
+
+      <div class="tech-card-header">
+        <div class="tech-logo">
+          <i class="fas fa-network-wired"></i>
+        </div>
+
+        <div>
+          <span>OUR TECHNOLOGY ECOSYSTEM</span>
+          <strong>CONNECTED. SECURE. RELIABLE.</strong>
+        </div>
+      </div>
+
+      <!-- Technology Network -->
+      <div class="tech-network">
+
+        <div class="central-node">
+          <i class="fas fa-building"></i>
+          <span>NISSI TECHNOLOGIES</span>
+        </div>
+
+        <div class="orbit-node orbit-1">
+          <i class="fas fa-server"></i>
+          <small>Infrastructure</small>
+        </div>
+
+        <div class="orbit-node orbit-2">
+          <i class="fas fa-code"></i>
+          <small>Software</small>
+        </div>
+
+        <div class="orbit-node orbit-3">
+          <i class="fas fa-shield-alt"></i>
+          <small>Security</small>
+        </div>
+
+        <div class="orbit-node orbit-4">
+          <i class="fas fa-network-wired"></i>
+          <small>Networking</small>
+        </div>
+
+        <!-- Connection Lines -->
+        <div class="connection-line line-1"></div>
+        <div class="connection-line line-2"></div>
+        <div class="connection-line line-3"></div>
+        <div class="connection-line line-4"></div>
+
+      </div>
+
+      <!-- Capability Footer -->
+      <div class="tech-card-footer capability-footer">
+
+        <div>
+          <i class="fas fa-laptop-code"></i>
+          <strong>Digital</strong>
+          <span>Solutions</span>
+        </div>
+
+        <div>
+          <i class="fas fa-lock"></i>
+          <strong>Secure</strong>
+          <span>Systems</span>
+        </div>
+
+        <div>
+          <i class="fas fa-headset"></i>
+          <strong>Expert</strong>
+          <span>Support</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Floating Capability Badge -->
+    <div class="experience-badge capability-badge">
+      <div class="badge-icon">
+        <i class="fas fa-check-circle"></i>
+      </div>
+
+      <div>
+        <strong>End-to-End ICT</strong>
+        <span>Technology solutions for modern businesses</span>
+      </div>
+    </div>
+
+  </div>
+</div> </div> 
+                                 <!-- ========================= MISSION & VISION ========================= --> 
+                                  <div class="mission-vision mt-5"> 
+                                    <div class="row g-4"> 
+                                      <!-- Vision --> 
+                                       <div class="col-md-6"> 
+                                        <div class="mv-card vision-card"> 
+                                          <div class="mv-icon"> <i class="fas fa-eye"></i> 
+                                          </div> <div class="mv-content"> 
+                                            <span>OUR VISION</span>  
+                                            <p> To become a leader in providing ICT services in Uganda, East Africa, and Africa </p> </div> </div> </div>
+                                             <!-- Mission -->
+                                               <div class="col-md-6"> 
+                                                <div class="mv-card mission-card"> 
+                                                  <div class="mv-icon">
+                                                     <i class="fas fa-bullseye"></i>
+                                                     </div> <div class="mv-content">
+                                                       <span>OUR MISSION</span>  
+                                                       <p> To provide procurement and logistics services in IT Solutions and infrastructure, management support to private and public institutions, non-governmental organizations (NGOs) so as to deliver sustainable, efficient and effective services through the provision of advisory, training and consulting services.  </p> 
+                                                      </div> </div> </div> </div> </div>
+                                                       <!-- ========================= CORE VALUES ========================= -->
+<div class="values-section mt-5">
+
+    <div class="text-center mb-4">
+        <span class="kicker">WHAT DRIVES US</span>
+        <h3 class="values-title">Our Core Values</h3>
+        <p>
+            The principles that guide how we serve our clients and deliver
+            reliable, innovative and professional technology solutions.
+        </p>
+    </div>
+
+    <div class="row g-4">
+
+        <!-- Value 1 - Integrity -->
+        <div class="col-lg-3 col-md-6">
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h4>Integrity</h4>
+                <p>
+                    We operate with honesty, transparency and professionalism
+                    in everything we do.
+                </p>
+            </div>
+        </div>
+
+        <!-- Value 2 - Innovation -->
+        <div class="col-lg-3 col-md-6">
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h4>Innovation</h4>
+                <p>
+                    We embrace new technologies and ideas to provide smarter
+                    and more effective solutions.
+                </p>
+            </div>
+        </div>
+
+        <!-- Value 3 - Customer Focus -->
+        <div class="col-lg-3 col-md-6">
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h4>Customer Focus</h4>
+                <p>
+                    We listen to our clients and design solutions around
+                    their specific needs and objectives.
+                </p>
+            </div>
+        </div>
+
+        <!-- Value 4 - Excellence -->
+        <div class="col-lg-3 col-md-6">
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h4>Excellence</h4>
+                <p>
+                    We are committed to quality products, dependable services
+                    and professional delivery.
+                </p>
+            </div>
+        </div>
+
+        <!-- Value 5 - Reliability -->
+        <div class="col-lg-3 col-md-6">
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h4>Reliability</h4>
+                <p>
+                    We provide dependable technology solutions that our
+                    clients can trust and rely on.
+                </p>
+            </div>
+        </div>
+
+        <!-- Value 6 - Clear Communication -->
+        <div class="col-lg-3 col-md-6">
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <h4>Clear Communication</h4>
+                <p>
+                    We communicate clearly, openly and consistently with
+                    clients throughout every project.
+                </p>
+            </div>
+        </div>
+
+        <!-- Value 7 - Accountability -->
+        <div class="col-lg-3 col-md-6">
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-user-check"></i>
+                </div>
+                <h4>Accountability</h4>
+                <p>
+                    We take responsibility for our commitments, decisions
+                    and the quality of our work.
+                </p>
+            </div>
+        </div>
+
+        <!-- Value 8 - Responsiveness -->
+        <div class="col-lg-3 col-md-6">
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h4>Responsiveness</h4>
+                <p>
+                    We respond promptly to client needs, technical issues
+                    and service requests.
+                </p>
+            </div>
+        </div>
+
+        <!-- Value 9 - Cooperation -->
+        <div class="col-lg-3 col-md-6">
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-people-arrows"></i>
+                </div>
+                <h4>Cooperation</h4>
+                <p>
+                    We work closely with our clients, partners and teams to
+                    achieve shared goals and successful outcomes.
+                </p>
+            </div>
+        </div>
+
+        <!-- Value 10 - Customer Satisfaction -->
+        <div class="col-lg-3 col-md-6">
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-smile"></i>
+                </div>
+                <h4>Customer Satisfaction</h4>
+                <p>
+                    We measure our success by delivering solutions that
+                    meet and exceed our clients' expectations.
+                </p>
+            </div>
+        </div>
+
+        <!-- Value 11 - Customer Care -->
+        <div class="col-lg-3 col-md-6">
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h4>Customer Care</h4>
+                <p>
+                    We provide friendly, professional and continuous support
+                    to ensure our clients receive the care they deserve.
+                </p>
+            </div>
+        </div>
+
+        <!-- Value 12 - Professionalism -->
+        <div class="col-lg-3 col-md-6">
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h4>Professionalism</h4>
+                <p>
+                    We maintain high professional standards in our services,
+                    conduct, communication and project delivery.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+                                                                                          <!-- ========================= COMPANY HIGHLIGHTS ========================= --> 
+                                                                                           <div class="about-highlights mt-5"> 
+                                                                                            <div class="highlight-item">
+                                                                                               <div class="highlight-icon">
+                                                                                                 <i class="fas fa-calendar-alt"></i> </div>
+                                                                                                  <div>
+    <strong>Enterprise</strong>
+    <span>Technology</span>
+</div></div>
+                                                                                                   <div class="highlight-item"> 
+                                                                                                    <div class="highlight-icon">
+                                                                                                       <i class="fas fa-cogs"></i> </div> 
+                                                                                                       <div> <strong>ICT</strong> <span>Solutions & Services</span> </div> </div>
+                                                                                                        <div class="highlight-item">
+                                                                                                           <div class="highlight-icon"> 
+                                                                                                            <i class="fas fa-building"></i>
+                                                                                                          </div> <div> <strong>Multi-Sector</strong> <span>Organizations Served</span> </div> </div>
+                                                                                                           <div class="highlight-item">
+                                                                                                            <div class="highlight-icon">
+                                                                                                               <i class="fas fa-headset"></i> </div> 
+                                                                                                               <div> <strong>Reliable</strong> <span>Technical Support</span>
+                                                                                                               </div> 
+                                                                                                              </div> 
+                                                                                                            </div> 
+                                                                                                          </div> 
+                                                                                                        </section>
+
+    <section class="section alt" id="services">
+      <div class="container">
+        <div class="section-head"><div><div class="kicker">Our capabilities</div><h2>Solutions built around your needs.</h2></div><p>From equipment procurement to infrastructure, software, cybersecurity and managed support, Nissi brings the capabilities needed to keep organizations productive.</p></div>
+        <div class="services">
+          <article class="service"><div class="icon">🖥️</div><h3>IT Equipment & Supplies</h3><p>Laptops, desktops, servers, tablets, printers, photocopiers, cameras, multimedia products and networking devices.</p></article>
+          <article class="service"><div class="icon">⚙️</div><h3>Software & Systems</h3><p>Software design, installation, maintenance, systems development and technology solutions for organizations.</p></article>
+          <article class="service"><div class="icon">🌐</div><h3>Networking & Infrastructure</h3><p>Computer repairs, networking, information-system setup, infrastructure deployment and technical maintenance.</p></article>
+          <article class="service"><div class="icon">🔐</div><h3>Cybersecurity</h3><p>Firewalls, anti-malware, VPNs, intrusion detection, authentication, encryption, identity and network access controls.</p></article>
+          <article class="service"><div class="icon">📦</div><h3>Procurement & Logistics</h3><p>IT procurement and logistics services supported by local and international technology partnerships.</p></article>
+          <article class="service"><div class="icon">🛠️</div><h3>Managed IT Support</h3><p>Managed IT services with responsibility for service delivery, security, availability, reliability and ongoing support.</p></article>
+          <article class="service"><div class="icon">💾</div><h3>Data Recovery</h3><p>Technical support including data recovery and solutions designed to reduce operational and technology risks.</p></article>
+          <article class="service"><div class="icon">🎓</div><h3>Training & Advisory</h3><p>Computer-skills development, advisory services, organizational systems improvement and technology consulting.</p></article>
+          <article class="service"><div class="icon">📊</div><h3>Organizational Systems</h3><p>Review and improvement of functions, systems, planning and management processes aligned to organizational objectives.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="security">
+      <div class="container">
+        <div class="section-head"><div><div class="kicker">Security</div><h2>Protect the systems that power your organization.</h2></div><p>A broad security capability covering endpoint, network, identity, access and monitoring requirements.</p></div>
+        <div class="security">
+          <div class="security-item"><div class="icon">🛡️</div><div><b>Network & Perimeter Security</b><span>Firewalls, web filtering, wireless security, VPN and network access control.</span></div></div>
+          <div class="security-item"><div class="icon">🚨</div><div><b>Threat Detection</b><span>Intrusion detection and prevention, security event correlation and incident management.</span></div></div>
+          <div class="security-item"><div class="icon">🔑</div><div><b>Identity & Authentication</b><span>Advanced authentication, identity management and single sign-on capabilities.</span></div></div>
+          <div class="security-item"><div class="icon">🔒</div><div><b>Data Protection</b><span>Data-at-rest encryption, digital certificates and enterprise security management.</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head"><div><div class="kicker">Technology supply</div><h2>Equip your organization for performance.</h2></div><p>Reliable technology products backed by professional installation, upgrading and after-sales support.</p></div>
+        <div class="equip">
+          <div class="equip-card"><strong>Computers</strong><span>Laptops, desktops & accessories</span></div>
+          <div class="equip-card"><strong>Servers</strong><span>Enterprise computing infrastructure</span></div>
+          <div class="equip-card"><strong>Printing</strong><span>Printers & photocopiers</span></div>
+          <div class="equip-card"><strong>Power</strong><span>UPS, generators & stabilisers</span></div>
+          <div class="equip-card"><strong>Networking</strong><span>Network devices & infrastructure</span></div>
+          <div class="equip-card"><strong>Security</strong><span>Cameras & security technology</span></div>
+          <div class="equip-card"><strong>Multimedia</strong><span>Professional multimedia products</span></div>
+          <div class="equip-card"><strong>Software</strong><span>Installation, upgrades & support</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="solutions">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="kicker">IT Solutions</div>
+            <h2>Technology solutions built around your business.</h2>
+          </div>
+          <p><em>From infrastructure and cybersecurity to software, networking and managed support, we help organizations align IT with their business requirements.</em></p>
+        </div>
+
+        <div class="services solution-showcase">
+          <article class="service solution-card">
+            <div class="icon"><i class="fa-solid fa-network-wired"></i></div>
+            <h3>Infrastructure & Networking</h3>
+            <p>Network design, installation, information-system setup, infrastructure deployment, maintenance and technical support.</p>
+          </article>
+
+          <article class="service solution-card">
+            <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3>Cybersecurity</h3>
+            <p>Firewalls, anti-malware, VPNs, intrusion detection and prevention, authentication, encryption and network access control.</p>
+          </article>
+
+          <article class="service solution-card">
+            <div class="icon"><i class="fa-solid fa-code"></i></div>
+            <h3>Software & Systems</h3>
+            <p>Software design, installation, maintenance, systems development and practical technology solutions for organizations.</p>
+          </article>
+
+          <article class="service solution-card">
+            <div class="icon"><i class="fa-solid fa-server"></i></div>
+            <h3>Hardware & IT Equipment</h3>
+            <p>Computers, servers, printers, networking devices, power products, cameras, multimedia equipment and accessories.</p>
+          </article>
+
+          <article class="service solution-card">
+            <div class="icon"><i class="fa-solid fa-headset"></i></div>
+            <h3>Managed IT Support</h3>
+            <p>Managed IT services supported by a 24-hour service desk, with emphasis on security, availability, reliability and service quality.</p>
+          </article>
+
+          <article class="service solution-card">
+            <div class="icon"><i class="fa-solid fa-database"></i></div>
+            <h3>Data Recovery & Maintenance</h3>
+            <p>Computer repairs, maintenance, data recovery, upgrades and ongoing technical support to reduce operational risk.</p>
+          </article>
+
+          <article class="service solution-card">
+            <div class="icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+            <h3>IT Procurement & Logistics</h3>
+            <p>Technology procurement and logistics supported by local and international technology partnerships and supplier relationships.</p>
+          </article>
+
+          <article class="service solution-card">
+            <div class="icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h3>IT Training & Advisory</h3>
+            <p>Computer-skills development, advisory services, organizational systems improvement and technology consulting.</p>
+          </article>
+
+          <article class="service solution-card">
+            <div class="icon"><i class="fa-solid fa-gears"></i></div>
+            <h3>Systems Improvement</h3>
+            <p>Review and improvement of organizational functions, systems, planning and management processes aligned to business objectives.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="team">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Our Team</div>
+            <h2>Experienced people behind the technology.</h2>
+          </div>
+          <p><em>Our company profile highlights a technically competent, committed and dedicated team supported by specialist associates and project teams.</em></p>
+        </div>
+
+        <div class="team-grid">
+          <article class="team-card">
+            <div class="team-avatar"><span>LP</span></div>
+            <div class="team-role">IT & Networking</div>
+            <h3>Mr. Lober Patrick</h3>
+            <p>Experienced in networking and information-system setups, with a background in Information Technology and Computing and electrical and electronics.</p>
+            <div class="team-tags">
+              <span>Networking</span><span>Information Systems</span><span>IT Infrastructure</span>
+            </div>
+          </article>
+
+          <article class="team-card">
+            <div class="team-avatar"><span>OA</span></div>
+            <div class="team-role">IT & Procurement</div>
+            <h3>Mr. Omunyokol Albert</h3>
+            <p>IT professional on the steering committee with experience in Information Technology, Computing, procurement and logistics.</p>
+            <div class="team-tags">
+              <span>IT</span><span>Procurement</span><span>Logistics</span>
+            </div>
+          </article>
+
+          <article class="team-card">
+            <div class="team-avatar"><span>NMJ</span></div>
+            <div class="team-role">IT & Technical Systems</div>
+            <h3>Ms.Najingo Muwanguzi Joan</h3>
+            <p>Experienced in networking and information-system setups, with additional expertise in electrical systems, equipment repair and maintenance.</p>
+            <div class="team-tags">
+              <span>Networking</span><span>Radio Systems</span><span>Technical Maintenance</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="team-note">
+          <i class="fa-solid fa-people-group"></i>
+          <div>
+            <strong>Project-based technical teams</strong>
+            <p>For specific assignments, Nissi Technologies assigns a project team with the necessary skills under a team leader and quality officer with the appropriate experience and background.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="clients">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Experience</div>
+            <h2>IT solutions trusted by organizations across Uganda.</h2>
+          </div>
+          <p><em>Nissi Technologies has undertaken assignments for public institutions, development organizations, universities, private businesses and other organizations.</em></p>
+        </div>
+
+      <div class="clients">
+
+        <div class="client">
+    <img src="images/clients/ISO.svg"
+         alt="ISO">
+    <span>International Security Organisation</span>
+  </div>
+
+  <div class="client">
+    <img src="images/clients/oop.svg"
+         alt="Office Of the President">
+    <span>Office Of the President</span>
+  </div>
+
+  <div class="client">
+    <img src="images/clients/iom.png"
+         alt="International Organization for Migration">
+    <span>International Organization for Migration</span>
+  </div>
+
+  <div class="client">
+    <img src="images/clients/nira.png"
+         alt="NIRA">
+    <span>NIRA</span>
+  </div>
+
+  <div class="client">
+    <img src="images/clients/ufza.png"
+         alt="Uganda Free Zones Authority">
+    <span>Uganda Free Zones Authority</span>
+  </div>
+
+  <div class="client">
+    <img src="images/clients/mglsd.jpg"
+         alt="Ministry of Gender, Labour and Social Development">
+    <span>Ministry of Gender Labour and Social Development</span>
+  </div>
+
+  <div class="client">
+    <img src="images/clients/mojca.png"
+         alt="Ministry of Justice and Constitutional Affairs">
+    <span>Ministry of Justice</span>
+  </div>
+
+  <div class="client">
+    <img src="images/clients/ups.png"
+         alt="Uganda Prisons Service">
+    <span>Uganda Prisons Service</span>
+  </div>
+
+  <div class="client">
+    <img src="images/clients/esc.png"
+         alt="Education Service Commission">
+    <span>Education Service Commission</span>
+  </div>
+
+  <div class="client">
+    <img src="images/clients/moes.png"
+         alt="Ministry of Education and Sports">
+    <span>Ministry of Education &amp; Sports</span>
+  </div>
+
+  <div class="client">
+    <img src="images/clients/muni.png"
+         alt="Muni University">
+    <span>Muni University</span>
+  </div>
+
+  <div class="client">
+    <img src="images/clients/mowt.jpg"
+         alt="Ministry of Works and Transport">
+    <span>Ministry of Works &amp; Transport</span>
+  </div>
+
+  <div class="client">
+    <img src="images/clients/modva.jpg"
+         alt="Ministry of Defence and Veterans Affairs">
+    <span>Ministry of Defence</span>
+  </div>
+
+  <div class="client">
+    <img src="images/clients/moh.jpg"
+         alt="Ministry of Health Uganda">
+    <span>Ministry of Health</span>
+  </div>
+
+  <div class="client">
+    <img src="images/clients/ucc.jpg"
+         alt="Uganda Communications Commission">
+    <span>Uganda Communications Commission</span>
+  </div>
+
+  <div class="client">
+    <img src="images/clients/makerere.jpg"
+         alt="Makerere University">
+    <span>Makerere University</span>
+  </div>
+
+  <div class="client">
+    <img src="images/clients/upf.png"
+         alt="Uganda Police Force">
+    <span>Uganda Police Force</span>
+  </div>
+
+</div>
+        <div class="stats">
+  <div class="stat">
+    <strong>24/7</strong>
+    <span>Service desk support</span>
+  </div>
+
+  <div class="stat">
+    <strong>15+</strong>
+    <span>Organizations represented in the profile</span>
+  </div>
+
+  <div class="stat">
+    <strong>360°</strong>
+    <span>End-to-end technology solutions</span>
+  </div>
+
+  <div class="stat">
+    <strong>IT</strong>
+    <span>Solutions, infrastructure & support</span>
+  </div>
+</div>
+
+        <div style="margin-top:50px;">
+          <div class="kicker" style="text-align:center;">Technology partners</div>
+          <h2 style="text-align:center;font-size:clamp(22px,3vw,34px);">Trusted global and local alliances</h2>
+        </div>
+
+        <div class="partners-grid">
+          <div class="partner"><img src="images/partners/tripp.svg" alt="Microsoft" loading="lazy"><span>Tripp-Lite</span></div>
+          <div class="partner"><img src="images/partners/cisco.svg" alt="Cisco" loading="lazy"><span>Cisco</span></div>
+          <div class="partner"><img src="images/partners/dell.svg" alt="Dell Technologies" loading="lazy"><span>Dell Technologies</span></div>
+          <div class="partner"><img src="images/partners/hp.svg" alt="HP" loading="lazy"><span>HP</span></div>
+          <div class="partner"><img src="images/partners/apc.svg" alt="APC by Schneider Electric" loading="lazy"><span>APC</span></div>
+          <div class="partner"><img src="images/partners/adobe.svg" alt="Adobe" loading="lazy"><span>Adobe</span></div>
+          <div class="partner"><img src="images/partners/cyberoam.png" alt="Cyberoam" loading="lazy"><span>Cyberoam</span></div>
+          <div class="partner"><img src="images/partners/Epson.svg" alt="Epson" loading="lazy"><span>EPSON</span></div>
+          <div class="partner"><img src="images/partners/Ricoh.svg" alt="Ricoh" loading="lazy"><span>RICOH</span></div>
+          <div class="partner"><img src="images/partners/Kaspersky.svg" alt="Kaspersky" loading="lazy"><span>Kaspersky</span></div>
+        </div>
+      </div>
+ <!-- ========================= LICENSING & REGISTRATION ========================= -->
+<div class="licensing-section text-center mt-4">
+    <p class="licensing-title">Licensed & Registered With</p>
+
+    <div class="licensing-badges">
+
+        <!-- NITA-U -->
+        <div class="license-badge">
+            <img src="images/logos/nita.png"
+                 alt="NITA-U Logo"
+                 class="license-logo">
+            <small>National Information Technology Authority - Uganda</small>
+        </div>
+
+        <!-- URSB -->
+        <div class="license-badge">
+            <img src="images/logos/ursb.png"
+                 alt="URSB Logo"
+                 class="license-logo">
+            <small>Uganda Registration Services Bureau</small>
+        </div>
+
+        <!-- KCCA -->
+        <div class="license-badge">
+            <img src="images/logos/kcca.png"
+                 alt="KCCA Logo"
+                 class="license-logo">
+            <small>Kampala Capital City Authority</small>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <div class="kicker">Start a conversation</div><h2 style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;">
+    Let's build the right technology environment for your business.
+</h2>
+          <p>Tell us what you need—equipment, infrastructure, software, security, procurement or managed support—and our team can discuss the appropriate solution.</p>
+          <div class="contact-details">
+            <div>📍 Plot 2 Colville Street, Shumuk House, 2nd Floor, Suite 51, Kampala, Uganda</div>
+            <div>☎ +256 414 698606 · +256 776 667080 · +256 752 667080</div>
+            <div>✉ info@nissitech.co.ug · patrick@nissitech.co.ug</div>
+            <div>🌐 www.nissitech.co.ug</div>
+          </div>
+          <!-- Google Maps -->
+          <!-- Google Maps -->
+<div class="map-container">
+  <iframe
+    src="https://www.google.com/maps?q=Shumuk+House,+Plot+2+Colville+Street,+Kampala,+Uganda&output=embed"
+    width="100%"
+    height="450"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+        </div>
+      <form action="send-enquiry.php" method="POST" class="consultation-form">
+  <h3>Request a Consultation</h3>
+
+  <input
+    type="text"
+    name="name"
+    required
+    placeholder="Full Name"
+    autocomplete="name"
+  >
+
+  <input
+    type="email"
+    name="email"
+    required
+    placeholder="Business Email"
+    autocomplete="email"
+  >
+
+  <input
+    type="tel"
+    name="phone"
+    placeholder="Phone Number"
+    autocomplete="tel"
+  >
+
+  <select name="service" required>
+    <option value="">What do you need?</option>
+    <option value="IT Equipment & Supplies">IT Equipment & Supplies</option>
+    <option value="Networking & Infrastructure">Networking & Infrastructure</option>
+    <option value="Software & Systems">Software & Systems</option>
+    <option value="Cybersecurity">Cybersecurity</option>
+    <option value="Procurement & Logistics">Procurement & Logistics</option>
+    <option value="Managed IT Support">Managed IT Support</option>
+    <option value="Other">Other</option>
+  </select>
+
+  <textarea
+    name="message"
+    required
+    rows="6"
+    placeholder="Briefly describe your requirement"
+  ></textarea>
+
+  <!-- Anti-spam honeypot -->
+  <input
+    type="text"
+    name="website"
+    tabindex="-1"
+    autocomplete="off"
+    style="display:none"
+  >
+
+  <button type="submit" class="submit">
+    Send Enquiry →
+  </button>
+
+  <p class="form-note">
+    Your enquiry will be securely sent to Nissi Technologies.
+  </p>
+</form>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container footer-grid"><div>© <span id="year"></span> Nissi Technologies Limited. All rights reserved.</div><div>IT Solutions · Infrastructure · Security · Support</div></div></footer>
+
+  <!-- WhatsApp floating button -->
+  <a href="https://wa.me/256776667080?text=Hello%20Nissi%20Technologies%2C%20I%20would%20like%20to%20inquire%20about%20your%20ICT%20services."
+   target="_blank"
+   rel="noopener"
+   class="whatsapp-float"
+   aria-label="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      navLinks.classList.toggle('mobile');
+      this.textContent = navLinks.classList.contains('mobile') ? '✕' : '☰';
+    });
+
+
+    // Enhanced UI interactions
+    document.addEventListener('DOMContentLoaded', () => {
+      const revealItems = document.querySelectorAll(
+        '.section-head, .service, .equip-card, .security-item, .client, .stat, .partner, .team-card, .team-note, .visual, .hero-card'
+      );
+
+      revealItems.forEach((el, index) => {
+        el.classList.add('reveal-on-scroll');
+        el.style.setProperty('--reveal-delay', `${Math.min(index % 6, 5) * 70}ms`);
+      });
+
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+      document.querySelectorAll('.reveal-on-scroll').forEach(el => revealObserver.observe(el));
+
+      // Active navigation item while scrolling.
+      const sections = document.querySelectorAll('main section[id]');
+      const navAnchors = document.querySelectorAll('.navlinks a[href^="#"]');
+
+      const activeObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          navAnchors.forEach(link => link.classList.remove('active-nav'));
+          const active = document.querySelector(`.navlinks a[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active-nav');
+        });
+      }, { rootMargin: '-25% 0px -60% 0px', threshold: 0 });
+
+      sections.forEach(section => activeObserver.observe(section));
+
+      // Animated statistics.
+      document.querySelectorAll('.stat strong').forEach(counter => {
+        const raw = counter.textContent.trim();
+        const match = raw.match(/^(\d+)(.*)$/);
+        if (!match) return;
+
+        const target = Number(match[1]);
+        const suffix = match[2];
+
+        counter.dataset.target = target;
+        counter.dataset.suffix = suffix;
+        counter.textContent = '0' + suffix;
+      });
+
+      const statsObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+
+          const counter = entry.target;
+          const target = Number(counter.dataset.target);
+          const suffix = counter.dataset.suffix || '';
+          const duration = 1100;
+          const start = performance.now();
+
+          function animate(now) {
+            const progress = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            counter.textContent = Math.round(target * eased) + suffix;
+            if (progress < 1) requestAnimationFrame(animate);
+          }
+
+          requestAnimationFrame(animate);
+          observer.unobserve(counter);
+        });
+      }, { threshold: 0.7 });
+
+      document.querySelectorAll('.stat strong').forEach(el => statsObserver.observe(el));
+
+      // Subtle 3D tilt on desktop cards.
+      if (window.matchMedia('(min-width: 901px)').matches) {
+        document.querySelectorAll('.service, .team-card').forEach(card => {
+          card.addEventListener('mousemove', (event) => {
+            const rect = card.getBoundingClientRect();
+            const x = (event.clientX - rect.left) / rect.width;
+            const y = (event.clientY - rect.top) / rect.height;
+            const rotateY = (x - 0.5) * 4;
+            const rotateX = (0.5 - y) * 4;
+            card.style.transform = `translateY(-6px) perspective(700px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+          });
+
+          card.addEventListener('mouseleave', () => {
+            card.style.transform = '';
+          });
+        });
+      }
+
+      // Dynamic mouse-following orange glow in the hero.
+      const hero = document.querySelector('.hero');
+      if (hero) {
+        hero.addEventListener('pointermove', (event) => {
+          const rect = hero.getBoundingClientRect();
+          const x = ((event.clientX - rect.left) / rect.width) * 100;
+          const y = ((event.clientY - rect.top) / rect.height) * 100;
+          hero.style.setProperty('--mouse-x', `${x}%`);
+          hero.style.setProperty('--mouse-y', `${y}%`);
+        });
+      }
+    });
+
+    // Close mobile menu on link click
+    document.querySelectorAll('.navlinks a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('mobile');
+        menuBtn.textContent = '☰';
+      });
+    });
+
+    // Close menu on outside click
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('header') && !e.target.closest('.navlinks')) {
+        navLinks.classList.remove('mobile');
+        menuBtn.textContent = '☰';
+      }
+    });
+
+    // Smooth scroll for all anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

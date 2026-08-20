@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nissi Technologies Limited — ICT solutions, IT equipment, infrastructure, managed services, networking, cybersecurity, software, procurement and technical support in Uganda.">
+  <meta name="keywords" content="Nissi Technologies, ICT Uganda, IT equipment Uganda, networking, cybersecurity, software development, procurement, IT support">
+  <title>Nissi Technologies Limited | ICT Solutions & Infrastructure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#071b33; --blue:#0b63ce; --blue2:#1785ff; --cyan:#18b6d9;
+      --ink:#0c1b2a; --muted:#607086; --light:#f5f8fc; --white:#fff;
+      --line:#e5ebf3; --shadow:0 18px 50px rgba(7,27,51,.10);
+      --radius:20px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,Arial,sans-serif;color:var(--ink);line-height:1.65;background:#fff}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1180px,92%);margin:auto}
+    .topbar{background:var(--navy);color:#dce8f6;font-size:13px}
+    .topbar .container{display:flex;justify-content:space-between;gap:20px;padding:9px 0;flex-wrap:wrap}
+    .topbar span{margin-right:18px}
+    header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(229,235,243,.9)}
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px;font-family:Manrope;font-weight:800;color:var(--navy)}
+    .brand-mark{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--blue),var(--cyan));display:grid;place-items:center;color:white;font-weight:800;box-shadow:0 8px 22px rgba(11,99,206,.25)}
+    .brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:1.3px;font-weight:700}
+    .navlinks{display:flex;gap:27px;align-items:center;font-size:14px;font-weight:600}
+    .navlinks a:hover{color:var(--blue)}
+    .nav-cta{background:var(--blue);color:#fff!important;padding:11px 18px;border-radius:10px}
+    .menu{display:none;border:0;background:none;font-size:26px}
+    .hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#061a31 0%,#0b3158 55%,#0877bd 100%);color:white}
+    .hero:before{content:"";position:absolute;width:620px;height:620px;border-radius:50%;right:-180px;top:-220px;background:radial-gradient(circle,rgba(24,182,217,.30),transparent 65%)}
+    .hero:after{content:"";position:absolute;inset:auto -10% -55% 25%;height:500px;background:radial-gradient(circle,rgba(23,133,255,.24),transparent 65%)}
+    .hero-grid{min-height:650px;display:grid;grid-template-columns:1.08fr .92fr;gap:60px;align-items:center;position:relative;z-index:1}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border:1px solid rgba(255,255,255,.22);border-radius:999px;background:rgba(255,255,255,.08);font-size:12px;font-weight:700;letter-spacing:.5px;margin-bottom:20px}
+    h1{font-family:Manrope;font-size:clamp(42px,5.4vw,72px);line-height:1.04;letter-spacing:-2.5px;max-width:750px}
+    .hero p{font-size:18px;color:#d7e5f4;max-width:650px;margin:24px 0 32px}
+    .buttons{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{padding:14px 21px;border-radius:11px;font-weight:700;font-size:14px;display:inline-flex;align-items:center;gap:8px}
+    .btn-primary{background:#fff;color:var(--navy)}
+    .btn-outline{border:1px solid rgba(255,255,255,.35);color:#fff}
+    .hero-card{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.15);border-radius:24px;padding:26px;box-shadow:0 30px 80px rgba(0,0,0,.18)}
+    .hero-card h3{font-family:Manrope;font-size:20px;margin-bottom:20px}
+    .metric{display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+    .metric:last-child{border:0}.metric strong{font-size:21px}.metric span{color:#c5d6e8;font-size:13px}
+    .section{padding:92px 0}.section.alt{background:var(--light)}
+    .section-head{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:42px}
+    .kicker{color:var(--blue);font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
+    h2{font-family:Manrope;font-size:clamp(30px,4vw,46px);line-height:1.12;letter-spacing:-1.2px;margin-top:8px}
+    .section-head p{max-width:520px;color:var(--muted)}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+    .about-copy p{color:var(--muted);margin-top:17px}
+    .quote{margin-top:25px;padding:20px 22px;border-left:4px solid var(--blue);background:#f4f8fd;border-radius:0 14px 14px 0;font-weight:700;color:var(--navy)}
+    .visual{min-height:420px;border-radius:28px;background:linear-gradient(145deg,#eaf5ff,#f9fbfe);border:1px solid var(--line);position:relative;overflow:hidden;box-shadow:var(--shadow)}
+    .network{position:absolute;inset:0;display:grid;place-items:center}
+    .network .core{width:110px;height:110px;border-radius:50%;display:grid;place-items:center;color:white;font-weight:800;background:linear-gradient(135deg,var(--blue),var(--cyan));box-shadow:0 20px 40px rgba(11,99,206,.25)}
+    .node{position:absolute;width:70px;height:70px;border-radius:18px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;font-size:25px;box-shadow:0 12px 30px rgba(7,27,51,.08)}
+    .n1{top:55px;left:70px}.n2{top:55px;right:70px}.n3{bottom:55px;left:70px}.n4{bottom:55px;right:70px}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .service{padding:27px;background:#fff;border:1px solid var(--line);border-radius:18px;transition:.25s;box-shadow:0 6px 20px rgba(7,27,51,.035)}
+    .service:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#c9dff8}
+    .icon{width:48px;height:48px;border-radius:13px;background:#eaf4ff;color:var(--blue);display:grid;place-items:center;font-size:22px;margin-bottom:19px}
+    .service h3{font-family:Manrope;font-size:18px;margin-bottom:9px}.service p{font-size:14px;color:var(--muted)}
+    .equip{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .equip-card{padding:23px;border:1px solid var(--line);border-radius:17px;background:white}
+    .equip-card strong{display:block;font-family:Manrope;font-size:16px;margin-bottom:5px}.equip-card span{font-size:13px;color:var(--muted)}
+    .security{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .security-item{background:#fff;border:1px solid var(--line);padding:22px;border-radius:16px;display:flex;gap:15px}
+    .security-item b{display:block;margin-bottom:4px}.security-item span{font-size:13px;color:var(--muted)}
+    .clients{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+    .client{padding:18px 12px;min-height:80px;display:grid;place-items:center;text-align:center;border:1px solid var(--line);border-radius:13px;background:#fff;font-size:13px;font-weight:700;color:#3e5066}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:45px}
+    .stat{padding:25px;border-radius:17px;background:#fff;border:1px solid var(--line)}.stat strong{font:800 31px Manrope;color:var(--blue);display:block}.stat span{font-size:13px;color:var(--muted)}
+    .contact{background:var(--navy);color:white}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+    .contact p{color:#c4d2e2;margin:18px 0 26px}.contact-details div{margin:14px 0;color:#dbe7f2}
+    form{background:#fff;padding:28px;border-radius:20px;color:var(--ink);display:grid;gap:13px}
+    input,textarea,select{width:100%;padding:14px;border:1px solid #dbe3ed;border-radius:10px;font:inherit;outline:none}
+    textarea{min-height:125px;resize:vertical}.submit{border:0;background:var(--blue);color:white;padding:14px;border-radius:10px;font-weight:800;cursor:pointer}
+    footer{background:#041426;color:#9fb2c8;padding:25px 0;font-size:12px}.footer-grid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media(max-width:900px){.navlinks{display:none}.menu{display:block}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.hero-grid{padding:80px 0}.services{grid-template-columns:repeat(2,1fr)}.equip{grid-template-columns:repeat(2,1fr)}.clients{grid-template-columns:repeat(3,1fr)}.stats{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:600px){.topbar .container{display:block}.topbar span{display:block;margin:2px 0}.section{padding:65px 0}.section-head{display:block}.section-head p{margin-top:15px}.services,.security,.equip,.clients,.stats{grid-template-columns:1fr}.hero-grid{min-height:auto;padding:70px 0}.hero-card{margin-top:10px}h1{letter-spacing:-1.7px}.visual{min-height:340px}.n1,.n3{left:30px}.n2,.n4{right:30px}}
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container">
+      <div><span>📍 Plot 2 Colville Street, Shumuk House, 2nd Floor, Suite 51, Kampala</span></div>
+      <div><span>☎ +256 414 698606</span><span>✉ info@nissitech.co.ug</span></div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#home" class="brand"><span class="brand-mark">N</span><span>NISSI TECHNOLOGIES<small>ICT SOLUTIONS & INFRASTRUCTURE</small></span></a>
+        <div class="navlinks">
+          <a href="#about">About</a><a href="#services">Services</a><a href="#security">Security</a><a href="#clients">Clients</a><a href="#contact" class="nav-cta">Get a Quote</a>
+        </div>
+        <button class="menu" aria-label="Open menu" onclick="document.querySelector('.navlinks').classList.toggle('mobile')">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">● ESTABLISHED 2004 · UGANDA</div>
+          <h1>Align your IT with your business.</h1>
+          <p>End-to-end ICT solutions, infrastructure, procurement, managed services and technical support designed around your organization’s needs.</p>
+          <div class="buttons"><a class="btn btn-primary" href="#contact">Request a Consultation →</a><a class="btn btn-outline" href="#services">Explore Services</a></div>
+        </div>
+        <div class="hero-card">
+          <h3>Why organizations choose Nissi</h3>
+          <div class="metric"><span>Reliable delivery</span><strong>✓</strong></div>
+          <div class="metric"><span>24-hour service desk</span><strong>24/7</strong></div>
+          <div class="metric"><span>Government & enterprise experience</span><strong>15+</strong></div>
+          <div class="metric"><span>ICT solutions & equipment</span><strong>End-to-end</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-copy">
+          <div class="kicker">Who we are</div><h2>Technology that works for the way you operate.</h2>
+          <p>Nissi Technologies Limited is a Ugandan private computer supplies and upgrading firm established in 2004. The company provides ICT sales, service, maintenance, system design and consulting to private and public institutions, NGOs and civil society organizations.</p>
+          <p>Our approach is consultative: understand the business requirement, design the right solution, deploy it professionally, and provide ongoing support.</p>
+          <div class="quote">“You demand it, we deliver it.”</div>
+        </div>
+        <div class="visual" aria-label="Illustration of connected ICT infrastructure">
+          <div class="network">
+            <div class="core">NISSI<br>ICT</div>
+            <div class="node n1">💻</div><div class="node n2">🌐</div><div class="node n3">🛡️</div><div class="node n4">☁️</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="services">
+      <div class="container">
+        <div class="section-head"><div><div class="kicker">Our capabilities</div><h2>Solutions built around your needs.</h2></div><p>From equipment procurement to infrastructure, software, cybersecurity and managed support, Nissi brings the capabilities needed to keep organizations productive.</p></div>
+        <div class="services">
+          <article class="service"><div class="icon">🖥️</div><h3>IT Equipment & Supplies</h3><p>Laptops, desktops, servers, tablets, printers, photocopiers, cameras, multimedia products and networking devices.</p></article>
+          <article class="service"><div class="icon">⚙️</div><h3>Software & Systems</h3><p>Software design, installation, maintenance, systems development and technology solutions for organizations.</p></article>
+          <article class="service"><div class="icon">🌐</div><h3>Networking & Infrastructure</h3><p>Computer repairs, networking, information-system setup, infrastructure deployment and technical maintenance.</p></article>
+          <article class="service"><div class="icon">🔐</div><h3>Cybersecurity</h3><p>Firewalls, anti-malware, VPNs, intrusion detection, authentication, encryption, identity and network access controls.</p></article>
+          <article class="service"><div class="icon">📦</div><h3>Procurement & Logistics</h3><p>IT procurement and logistics services supported by local and international technology partnerships.</p></article>
+          <article class="service"><div class="icon">🛠️</div><h3>Managed IT Support</h3><p>Managed IT services with responsibility for service delivery, security, availability, reliability and ongoing support.</p></article>
+          <article class="service"><div class="icon">💾</div><h3>Data Recovery</h3><p>Technical support including data recovery and solutions designed to reduce operational and technology risks.</p></article>
+          <article class="service"><div class="icon">🎓</div><h3>Training & Advisory</h3><p>Computer-skills development, advisory services, organizational systems improvement and technology consulting.</p></article>
+          <article class="service"><div class="icon">📊</div><h3>Organizational Systems</h3><p>Review and improvement of functions, systems, planning and management processes aligned to organizational objectives.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="security">
+      <div class="container">
+        <div class="section-head"><div><div class="kicker">Security</div><h2>Protect the systems that power your organization.</h2></div><p>A broad security capability covering endpoint, network, identity, access and monitoring requirements.</p></div>
+        <div class="security">
+          <div class="security-item"><div class="icon">🛡️</div><div><b>Network & Perimeter Security</b><span>Firewalls, web filtering, wireless security, VPN and network access control.</span></div></div>
+          <div class="security-item"><div class="icon">🚨</div><div><b>Threat Detection</b><span>Intrusion detection and prevention, security event correlation and incident management.</span></div></div>
+          <div class="security-item"><div class="icon">🔑</div><div><b>Identity & Authentication</b><span>Advanced authentication, identity management and single sign-on capabilities.</span></div></div>
+          <div class="security-item"><div class="icon">🔒</div><div><b>Data Protection</b><span>Data-at-rest encryption, digital certificates and enterprise security management.</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head"><div><div class="kicker">Technology supply</div><h2>Equip your organization for performance.</h2></div><p>Reliable technology products backed by professional installation, upgrading and after-sales support.</p></div>
+        <div class="equip">
+          <div class="equip-card"><strong>Computers</strong><span>Laptops, desktops & accessories</span></div>
+          <div class="equip-card"><strong>Servers</strong><span>Enterprise computing infrastructure</span></div>
+          <div class="equip-card"><strong>Printing</strong><span>Printers & photocopiers</span></div>
+          <div class="equip-card"><strong>Power</strong><span>UPS, generators & stabilisers</span></div>
+          <div class="equip-card"><strong>Networking</strong><span>Network devices & infrastructure</span></div>
+          <div class="equip-card"><strong>Security</strong><span>Cameras & security technology</span></div>
+          <div class="equip-card"><strong>Multimedia</strong><span>Professional multimedia products</span></div>
+          <div class="equip-card"><strong>Software</strong><span>Installation, upgrades & support</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="clients">
+      <div class="container">
+        <div class="section-head"><div><div class="kicker">Experience</div><h2>Trusted across public, private and development sectors.</h2></div><p>The profile lists assignments and working relationships across government institutions, NGOs, universities and businesses.</p></div>
+        <div class="clients">
+          <div class="client">International Organization for Migration</div><div class="client">NIRA</div><div class="client">Uganda Free Zones Authority</div><div class="client">Ministry of Gender</div><div class="client">Ministry of Justice</div>
+          <div class="client">Uganda Prisons Service</div><div class="client">Education Service Commission</div><div class="client">Ministry of Education & Sports</div><div class="client">Muni University</div><div class="client">Ministry of Works & Transport</div>
+          <div class="client">Ministry of Defence</div><div class="client">Ministry of Health</div><div class="client">UCC</div><div class="client">Makerere University</div><div class="client">Uganda Police Force</div>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong>2004</strong><span>Year established</span></div><div class="stat"><strong>24/7</strong><span>Service desk offering stated in profile</span></div><div class="stat"><strong>15+</strong><span>Named institutions in client/job profile</span></div><div class="stat"><strong>Uganda</strong><span>Headquartered in Kampala</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <div class="kicker">Start a conversation</div><h2>Let’s build the right technology environment for your business.</h2>
+          <p>Tell us what you need—equipment, infrastructure, software, security, procurement or managed support—and our team can discuss the appropriate solution.</p>
+          <div class="contact-details">
+            <div>📍 Plot 2 Colville Street, Shumuk House, 2nd Floor, Suite 51, Kampala, Uganda</div>
+            <div>☎ +256 414 698606 · +256 776 667080 · +256 752 667080</div>
+            <div>✉ info@nissitech.co.ug · patrick@nissitech.co.ug</div>
+            <div>🌐 www.nissitech.co.ug</div>
+          </div>
+        </div>
+        <form onsubmit="event.preventDefault(); alert('Thank you. Your enquiry form is ready to connect to Nissi Technologies email/CRM.');">
+          <h3>Request a consultation</h3>
+          <input required placeholder="Full name">
+          <input required type="email" placeholder="Business email">
+          <input placeholder="Phone number">
+          <select><option>What do you need?</option><option>IT Equipment & Supplies</option><option>Networking & Infrastructure</option><option>Software & Systems</option><option>Cybersecurity</option><option>Procurement & Logistics</option><option>Managed IT Support</option><option>Other</option></select>
+          <textarea placeholder="Briefly describe your requirement"></textarea>
+          <button class="submit">Send Enquiry →</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container footer-grid"><div>© <span id="year"></span> Nissi Technologies Limited. All rights reserved.</div><div>Reliable · Responsive · Accountable · Customer-focused</div></div></footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const links=document.querySelectorAll('.navlinks a');
+    links.forEach(a=>a.addEventListener('click',()=>document.querySelector('.navlinks').classList.remove('mobile')));
+  </script>
+</body>
+</html>
