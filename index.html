@@ -2523,6 +2523,44 @@ a,button,.btn,.service,.equip-card,.client,.partner,.stat,
             height: 48px;
         }
     }
+    /* =========================
+   TEAM AVATARS
+========================= */
+
+.team-avatar {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 22px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #f1f5f9;
+  border: 5px solid #0b2d5c;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-avatar img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.4s ease;
+}
+
+.team-card:hover .team-avatar img {
+  transform: scale(1.06);
+}
+
+.team-card {
+  text-align: center;
+}
+
+.team-card .team-role {
+  margin-top: 5px;
+}
   </style>
 </head>
 <body>
@@ -3367,57 +3405,110 @@ a,button,.btn,.service,.equip-card,.client,.partner,.stat,
       </div>
     </section>
 
-    <section class="section alt" id="team">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="kicker">Our Team</div>
-            <h2>Experienced people behind the technology.</h2>
-          </div>
-          <p><em>Our company profile highlights a technically competent, committed and dedicated team supported by specialist associates and project teams.</em></p>
-        </div>
-
-        <div class="team-grid">
-          <article class="team-card">
-            <div class="team-avatar"><span>LP</span></div>
-            <div class="team-role">IT & Networking</div>
-            <h3>Mr. Lober Patrick</h3>
-            <p>Experienced in networking and information-system setups, with a background in Information Technology and Computing and electrical and electronics.</p>
-            <div class="team-tags">
-              <span>Networking</span><span>Information Systems</span><span>IT Infrastructure</span>
-            </div>
-          </article>
-
-          <article class="team-card">
-            <div class="team-avatar"><span>OA</span></div>
-            <div class="team-role">IT & Procurement</div>
-            <h3>Mr. Omunyokol Albert</h3>
-            <p>IT professional on the steering committee with experience in Information Technology, Computing, procurement and logistics.</p>
-            <div class="team-tags">
-              <span>IT</span><span>Procurement</span><span>Logistics</span>
-            </div>
-          </article>
-
-          <article class="team-card">
-            <div class="team-avatar"><span>NMJ</span></div>
-            <div class="team-role">IT & Technical Systems</div>
-            <h3>Ms.Najingo Muwanguzi Joan</h3>
-            <p>Experienced in networking and information-system setups, with additional expertise in electrical systems, equipment repair and maintenance.</p>
-            <div class="team-tags">
-              <span>Networking</span><span>Radio Systems</span><span>Technical Maintenance</span>
-            </div>
-          </article>
-        </div>
-
-        <div class="team-note">
-          <i class="fa-solid fa-people-group"></i>
-          <div>
-            <strong>Project-based technical teams</strong>
-            <p>For specific assignments, Nissi Technologies assigns a project team with the necessary skills under a team leader and quality officer with the appropriate experience and background.</p>
-          </div>
-        </div>
+   <section class="section alt" id="team">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="kicker">Our Team</div>
+        <h2>Experienced people behind the technology.</h2>
       </div>
-    </section>
+      <p>
+        <em>
+          Our company profile highlights a technically competent, committed and
+          dedicated team supported by specialist associates and project teams.
+        </em>
+      </p>
+    </div>
+
+    <div class="team-grid">
+
+      <!-- Lober Patrick -->
+      <article class="team-card">
+        <div class="team-avatar">
+          <img src="images/patrick.png" alt="Mr. Lober Patrick">
+        </div>
+
+        <div class="team-role">IT & Networking</div>
+
+        <h3>Mr. Lober Patrick</h3>
+
+        <p>
+          Experienced in networking and information-system setups, with a
+          background in Information Technology and Computing and electrical
+          and electronics.
+        </p>
+
+        <div class="team-tags">
+          <span>Networking</span>
+          <span>Information Systems</span>
+          <span>IT Infrastructure</span>
+        </div>
+      </article>
+
+
+      <!-- Omunyokol Albert -->
+      <article class="team-card">
+        <div class="team-avatar">
+          <img src="images/albert.png" alt="Mr. Omunyokol Albert">
+        </div>
+
+        <div class="team-role">IT & Procurement</div>
+
+        <h3>Mr. Omunyokol Albert</h3>
+
+        <p>
+          IT professional on the steering committee with experience in
+          Information Technology, Computing, procurement and logistics.
+        </p>
+
+        <div class="team-tags">
+          <span>IT</span>
+          <span>Procurement</span>
+          <span>Logistics</span>
+        </div>
+      </article>
+
+
+      <!-- Najingo Muwanguzi Joan -->
+      <article class="team-card">
+        <div class="team-avatar">
+          <img src="images/joan.jpg" alt="Ms. Najingo Muwanguzi Joan">
+        </div>
+
+        <div class="team-role">IT & Technical Systems</div>
+
+        <h3>Ms. Najingo Muwanguzi Joan</h3>
+
+        <p>
+          Experienced in networking and information-system setups, with
+          additional expertise in electrical systems, equipment repair
+          and maintenance.
+        </p>
+
+        <div class="team-tags">
+          <span>Networking</span>
+          <span>Radio Systems</span>
+          <span>Technical Maintenance</span>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="team-note">
+      <i class="fa-solid fa-people-group"></i>
+
+      <div>
+        <strong>Project-based technical teams</strong>
+
+        <p>
+          For specific assignments, Nissi Technologies assigns a project
+          team with the necessary skills under a team leader and quality
+          officer with the appropriate experience and background.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
     <section class="section" id="clients">
       <div class="container">
